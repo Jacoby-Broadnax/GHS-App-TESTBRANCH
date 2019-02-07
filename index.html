@@ -1,0 +1,1174 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>GHS App</title>
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0" />
+    <link rel="stylesheet" href="css/vivify.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="vivify.min.css" rel="stylesheet" type="text/css" />
+    <link rel="manifest" href="manifest.json">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="shortcut icon" href="Branding/Ios%20App%20Icon.png" type="image/x-icon">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-startup-image" href="Assets/IOS%20Splashscreen.png">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-title" content="GHS App">
+    <link rel="apple-touch-icon" href="Branding/apple-touch-icon.png">
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazy/1.7.1/jquery.lazy.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazy/1.7.1/plugins/jquery.lazy.youtube.min.js"></script>
+    <script src="https://github.com/boyofgreen/manUp.js/"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122866044-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-122866044-3');
+</script>
+</head>
+
+<body>
+
+    <header class="header" style="display:none;">
+        <h1 class="header__title">GHS App</h1>
+        <button id="butRefresh" class="headerButton" aria-label="Refresh"></button>
+        <button id="butAdd" class="headerButton" aria-label="Add"></button>
+    </header>
+
+
+    <div class="hamburger-menu vivify fadeInBottom duration-300 " style="height: 484px;">
+
+
+
+
+
+        <div class="options">
+
+
+
+
+
+            <div class="options-sect" style="margin: auto;width: 64px;">
+                <img style="margin: auto;width: 54px;margin-top: 0px;margin-bottom: -10px;" src="Branding/512px%20logo.png">
+
+            </div>
+            <div class="card-divider" style="margin-bottom: -9px;margin-top: 4px"></div>
+
+            <div class="options-sect" onclick="kahoot()">
+                <button>
+                    <h3>Play Kahoot!</h3>
+                    <p>Kahoot.it</p>
+                </button>
+
+            </div>
+
+
+
+            <div class="options-sect" onclick="admiral()">
+                <button>
+                    <h3>Shop School Store</h3>
+                    <p>AdmiralNation.com</p>
+                </button>
+
+            </div>
+
+
+            <div class="options-sect" onclick="grades()">
+                <button>
+                    <h3>Check My Grades</h3>
+                    <p>Powered By Chalkable</p>
+                </button>
+
+            </div>
+
+
+            <div class="options-sect" onclick="mealmenu()">
+                <button onclick="meal()">
+                    <h3>Meal Menu</h3>
+                    <p>February</p>
+                </button>
+
+            </div>
+
+            <a href="https://payments.efundsforschools.com/v3/districts/56099" target="_blank">
+                <div class="options-sect" onclick="mealmenu()">
+                    <button>
+                        <h3>Pay Fees/Lunch</h3>
+                        <p>E-Funds for schools</p>
+                    </button>
+
+                </div>
+            </a>
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+    <div class="top-navigation">
+
+
+    </div>
+
+    <div class="menu-button"><button onclick="expand()" class="vivify popIn delay-350"><img src="Assets/Menu%20Button.svg"></button><button style="color: black;" class="close vivify popIn" onclick="collapse()"><i class="material-icons" id="search">close</i></button></div>
+
+
+    <div class="bottom-navigation">
+        <div class="button-items">
+            <button onclick="leftpress()"><img id="leftbtn" src="Assets/Media.svg"></button>
+
+            <button onclick="homepress()"><img id="home" src="Assets/Home.svg"></button>
+
+            <button style="margin-left: 50px;" onclick="searchopen()"><img id="home" src="Assets/Search.svg"></button>
+
+            <button onclick="rightpress()"><img id="rightbtn" src="Assets/Athletics.svg"></button>
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+    <div class="homescreen">
+
+
+        <div class="header-base">
+            <h1 class="vivify popOut delay-1500" style="position:fixed;width:100%;background-color:white;">Welcome To The</h1>
+            <h1>GHS App</h1>
+            <div class="card-divider" style="margin-top:17px;"></div>
+        </div>
+
+
+
+        <div class="spacer"></div>
+
+
+        <div class="navigation-card cd1 vivify fadeIn delay-100 event" data-aos="fade-up">
+
+            <h3 class="darkmode" style="margin-left: 23px;">Off Mice And Men | Admiral Theatre
+            </h3>
+            <a href="#">
+                <div>
+                    <h4 class="darkmode" style="margin-left: 23px">Date: March 21-22, 2019
+                    </h4>
+                </div>
+            </a>
+
+            <img class="card-img" style="height:185px;" src="Images/miceandmen.jpeg">
+            <p class="p-plus ">Based on the classic novella written by John Steinbeck, Of Mice and Men tells the tale of two great friends and their struggle to live the American dream. George and Lennie have been traveling together from ranch to ranch for years, working hard to make ends meet and save enough for a place of their own. <span class="more"> The two are polar opposites: George is intelligent, quick and small, while Lennie is slow-minded, childlike, and tall. Though they are different, they care deeply about each other. They have been dreaming for years to save enough for a little land of their own when they are both hired to a new job they believe that they may finally achieve their goal. But trouble begins to brew when one of the bosses' wife becomes too interested in the infatuated Lennie. Tragic, yet beautiful, Of Mice and Men is the extremely popular play that has become a staple of American theatre.
+                </span><button onclick="viewmore()" class="more-btn">Read More</button><button onclick="viewless()" class="less-btn">Read Less</button> </p>
+
+            <div class="card-btns">
+
+
+
+            </div>
+        </div>
+
+
+
+
+        <div class="card-divider"></div>
+
+
+
+
+
+
+
+
+
+
+        <div class="navigation-card cd1 vivify fadeIn delay-100 test" data-aos="fade-up">
+
+            <h3 class="darkmode" style="margin-left: 23px;">11th Grade ACT Test
+            </h3>
+            <a href="#">
+                <div>
+                    <h4 class="darkmode" style="margin-left: 23px">Date: Feb 20th
+                    </h4>
+                </div>
+            </a>
+
+            <img class="card-img" style="height:185px;" src="Images/act.jpg">
+
+
+            <div class="rounded-btn-wrapper" style="margin-bottom: 77px;width: 182px; "> <a href="http://www.act.org/" class="rounded-btn"><button>Act.org</button></a>
+
+            </div>
+        </div>
+
+
+
+        <div class="card-divider"></div>
+
+
+
+
+
+
+
+
+
+
+        <div class="navigation-card cd1 vivify fadeIn delay-100 help" data-aos="fade-up">
+
+            <h3 class="darkmode" style="margin-left: 23px;">Weather Forecast
+            </h3>
+            <a href="#">
+                <div>
+                    <h4 class="darkmode" style="margin-left: 23px">Gulfport, MS
+                    </h4>
+                </div>
+            </a>
+
+            <a style="margin: auto; width: 340px;" class="weatherwidget-io" href="https://forecast7.com/en/30d37n89d09/gulfport/?unit=us" data-label_1="GULFPORT" data-label_2="WEATHER" data-theme="pure">GULFPORT WEATHER</a>
+            <script>
+                !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+
+        </div>
+
+        <div class="card-divider"></div>
+
+
+
+
+
+
+
+
+
+
+        <div class="navigation-card cd1 vivify fadeIn delay-100 event" data-aos="fade-up">
+
+            <h3 class="darkmode" style="margin-left: 23px;">Rising Stars, Senior And Junior Event
+
+            </h3>
+            <a href="#">
+                <div>
+                    <h4 class="darkmode" style="margin-left: 23px">Date: February 26, 2019 8:25-12:25
+
+
+                    </h4>
+                </div>
+            </a>
+
+            <img class="card-img" style="height:185px;" src="Images/AIG.jpg">
+
+            <p>You will be attending the Rising Stars event for senior students or the Advance in Finance event for junior students. Seniors, please prepare your resume, plan your attire and brush up on your etiquette skills. Juniors please come dressed professionally and be prepared to interact with business professionals in a classroom environment. This event is MANDATORY.</p>
+
+            <div class="rounded-btn-wrapper" style="margin-bottom: 77px;width: 182px; "> <a href="https://docs.google.com/document/d/114ZwBkVHPVe7OcdKhqC3MFh_-CqnJzFhZf-3oJRb00s/edit?usp=sharing" class="rounded-btn" target="_blank"><button>Learn More</button></a>
+
+            </div>
+        </div>
+
+
+        <div class="card-divider"></div>
+
+
+
+
+
+
+
+
+
+
+        <div class="navigation-card cd1 vivify fadeIn delay-100 event" data-aos="fade-up">
+
+            <h3 class="darkmode" style="margin-left: 23px;">Mardi Gras Holiday
+            </h3>
+            <a href="#">
+                <div>
+                    <h4 class="darkmode" style="margin-left: 23px">Date: March 4th-6th
+                    </h4>
+                </div>
+            </a>
+
+            <img class="card-img" style="height:185px;" src="https://shorelinevillage.com/wp-content/uploads/2018/01/mardi-gras_2018_02_750x500-750x480.jpg">
+
+
+            <div class="rounded-btn-wrapper" style="margin-bottom: 77px;width: 182px; "> <a href="https://www.mardigrasneworleans.com/" class="rounded-btn"><button>Mardigras.com</button></a>
+
+            </div>
+        </div>
+
+        <div class="card-divider"></div>
+
+
+
+
+
+
+
+
+
+
+        <div class="navigation-card cd1 vivify fadeIn delay-100 help" data-aos="fade-up">
+
+            <h3 class="darkmode" style="margin-left: 23px;">Give Feedback | Help Improve The GHS App
+            </h3>
+            <a href="#">
+                <div>
+                    <h4 class="darkmode" style="margin-left: 23px">GHS App
+                    </h4>
+                </div>
+            </a>
+
+            <span class="likebtn-wrapper" data-identifier="item_1"></span>
+
+
+            <div class="rounded-btn-wrapper" style="margin-bottom: 77px;width: 182px; "> <a href="https://goo.gl/forms/DhvAH3uesqBiV3JD3" class="rounded-btn" target="_blank"><button>Give Feedback</button></a>
+
+            </div>
+
+        </div>
+
+        <div class="card-divider"></div>
+
+
+
+
+
+
+
+
+
+
+        <div class="navigation-card cd1 vivify fadeIn delay-100 promote" data-aos="fade-up">
+
+            <h3 class="darkmode" style="margin-left: 23px;">Shop Admiral Nation On GHS App
+            </h3>
+            <a href="#">
+                <div>
+                    <h4 class="darkmode" style="margin-left: 23px">Admiral Nation
+                    </h4>
+                </div>
+            </a>
+
+            <div class="card-img">
+                <div class="admiral-ad"><a href="https://admiralnation.github.io/SHOP/tops_gucci1.html"><img src="ShopItems/Gucci%20Thumbnail1.jpg"></a><a href="https://admiralnation.github.io/SHOP/tops_zippullover.html"><img src="ShopItems/Quarter%20Zip%20Thumbnail.jpg"></a></div>
+
+            </div>
+            <p style="margin-top: 50px;">Tap the G button or visit Admiralnation.com</p>
+
+            <div class="rounded-btn-wrapper" style="margin-bottom: 77px;width: 182px;"><a href="#" class="rounded-btn"><button onclick="admiral()">View In App</button></a>
+
+            </div>
+
+            <div class="card-btns">
+
+
+
+            </div>
+        </div>
+
+
+        <div class="card-divider"></div>
+
+
+
+
+
+
+
+
+
+
+        <div class="navigation-card cd1 vivify fadeIn delay-100 test" data-aos="fade-up">
+
+            <h3 class="darkmode" style="margin-left: 23px;">10th Grade ACT Test
+            </h3>
+            <a href="#">
+                <div>
+                    <h4 class="darkmode" style="margin-left: 23px">Date: March 12th
+                    </h4>
+                </div>
+            </a>
+
+            <img class="card-img" style="height:185px;" src="Images/act.jpg">
+
+
+            <div class="rounded-btn-wrapper" style="margin-bottom: 77px;width: 182px; "> <a href="http://www.act.org/" class="rounded-btn"><button>Act.org</button></a>
+
+            </div>
+        </div>
+
+
+        <div class="card-divider"></div>
+
+
+
+
+
+
+
+
+
+
+        <div class="navigation-card cd1 vivify fadeIn delay-100 help" data-aos="fade-up">
+
+            <h3 class="darkmode" style="margin-left: 23px;">Check Your Grades In The GHS App
+            </h3>
+            <a href="#">
+                <div>
+                    <h4 class="darkmode" style="margin-left: 23px">GHS App - Help
+                    </h4>
+                </div>
+            </a>
+
+            <img class="card-img" style="height:185px;" src="Images/grades.jpeg">
+            <p>Tap the G button on the navigation bar.</p>
+
+            <div class="card-btns">
+
+
+
+            </div>
+        </div>
+
+
+
+
+
+        <div class="card-divider"></div>
+
+
+
+
+
+
+
+
+
+
+        <div class="navigation-card cd1 vivify fadeIn delay-100 help" data-aos="fade-up">
+
+            <h3 class="darkmode" style="margin-left: 23px;">Add To Home Screen | Android
+            </h3>
+            <a href="#">
+                <div>
+                    <h4 class="darkmode" style="margin-left: 23px">GHS App - Help
+                    </h4>
+                </div>
+            </a>
+
+            <img class="card-img" style="height:185px;" src="Images/Android%20Add%20to%20Home.svg">
+            <p>Don't Forget to Add GHS App To Your Homescreen</p>
+
+            <div class="card-btns">
+
+
+
+            </div>
+        </div>
+
+
+
+
+        <div class="card-divider"></div>
+
+
+
+
+
+        <div class="navigation-card cd1 vivify fadeIn delay-100 help" data-aos="fade-up">
+
+            <h3 class="darkmode" style="margin-left: 23px;">Place Holder
+            </h3>
+            <a href="#">
+                <div>
+                    <h4 class="darkmode" style="margin-left: 23px">Place Holder
+                    </h4>
+                </div>
+            </a>
+
+            <div class="swipe-menu"><img src="https://via.placeholder.com/150x200?text=Visit+Blogging.com+Now
+
+C/O https://placeholder.com/"/><img src="https://via.placeholder.com/150x200?text=GHS+App+TestBranc
+
+C/O https://placeholder.com/"/><img src="https://via.placeholder.com/150x200?text=Visit+Blogging.com+Now
+
+C/O https://placeholder.com/"/><img src="https://via.placeholder.com/150x200?text=Visit+Blogging.com+Now
+
+C/O https://placeholder.com/"/></div>
+    
+
+            <div class="card-btns">
+
+
+
+            </div>
+        </div>
+
+
+
+
+        <div class="card-divider"></div>
+
+
+
+
+
+        <div class="navigation-card cd1 vivify fadeIn delay-100 help" data-aos="fade-up">
+
+            <h3 class="darkmode" style="margin-left: 23px;">Add To Home Screen | IPhone
+            </h3>
+            <a href="#">
+                <div>
+                    <h4 class="darkmode" style="margin-left: 23px">GHS App - Help
+                    </h4>
+                </div>
+            </a>
+
+            <img class="card-img" style="height:185px;" src="Images/IOS%20Add%20To%20Home.svg">
+            <p>Don't Forget to Add GHS App To Your Homescreen</p>
+
+            <div class="card-btns">
+
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="media-sect">
+
+
+
+        <div class="horizontal-nav">
+            <div class="button-wrapper"><button id="btn-video" class="vivify popIn" autofocus onclick="video()">Video</button><button class="vivify popIn" onclick="live()">Live</button></div>
+
+        </div>
+
+        <div class="video-sect" style="margin-top: 73px;margin-bottom: 50px;">
+            <div class="indicator-container">
+                <div class="indicator">
+                    <div class="line-indicator vivify pullLeft duration-500"></div>
+                </div>
+            </div>
+
+            <div class="navigation-card cd1 vivify fadeIn delay-100 " data-aos="fade-up">
+
+                <h3 class="darkmode" style="margin-left: 23px;">Five Beautiful Mintues at Gulfport High
+                </h3>
+                <a href="#">
+                    <div>
+                        <h4 class="darkmode" style="margin-left: 23px">Chelsea Lewis | YouTube
+                        </h4>
+                    </div>
+                </a>
+
+                <img class="card-img" style="height:185px;" src="Images/fiveminutes.jpg">
+
+                <div class="rounded-btn-wrapper" style="margin-bottom: 73px;width: 182px;"> <a href="https://www.youtube.com/watch?v=kMGrNyAS-70&t=6s" class="rounded-btn"><button>Watch Video</button></a>
+
+                </div>
+            </div>
+
+
+            <div class="card-divider"></div>
+
+            <div class="navigation-card cd1 vivify fadeIn delay-100 " data-aos="fade-up">
+
+                <h3 class="darkmode" style="margin-left: 23px;">BOXED - Gulfport Admiral Band
+                </h3>
+                <a href="#">
+                    <div>
+                        <h4 class="darkmode" style="margin-left: 23px">BITWDan | YouTube
+                        </h4>
+                    </div>
+                </a>
+
+                <img class="card-img" style="height:185px;" src="Images/band.jpg">
+
+                <div class="rounded-btn-wrapper" style="margin-bottom: 77px;width: 182px;"> <a href="https://www.youtube.com/watch?v=I3wxQuZtKcw" class="rounded-btn"><button>Watch Video</button></a>
+
+                </div>
+            </div>
+
+
+            <div class="card-divider"></div>
+
+            <div class="navigation-card cd1 vivify fadeIn delay-100 " data-aos="fade-up">
+
+                <h3 class="darkmode" style="margin-left: 23px;">Gulfport High's renovated campus a sight to see
+                </h3>
+                <a href="#">
+                    <div>
+                        <h4 class="darkmode" style="margin-left: 23px">The SunHerald | YouTube
+                        </h4>
+                    </div>
+                </a>
+
+                <img class="card-img" style="height:185px;" src="Images/sunherald.jpg">
+
+                <div class="rounded-btn-wrapper" style="margin-bottom: 77px;width: 182px;"> <a href="https://www.youtube.com/watch?v=fINk0IENnk4&t=28s" class="rounded-btn"><button>Watch Video</button></a>
+
+                </div>
+            </div>
+
+
+
+            <div class="card-divider"></div>
+
+            <div class="navigation-card cd1 vivify fadeIn delay-100 " data-aos="fade-up">
+
+                <h3 class="darkmode" style="margin-left: 23px;">Gulfport Admiral Band 2018
+                </h3>
+                <a href="#">
+                    <div>
+                        <h4 class="darkmode" style="margin-left: 23px">
+                            westleymorehead
+                            | YouTube
+                        </h4>
+                    </div>
+                </a>
+
+                <img class="card-img" style="height:185px;" src="Images/band2.jpg">
+
+                <div class="rounded-btn-wrapper" style="margin-bottom: 77px;width: 182px;"> <a href="https://www.youtube.com/watch?v=SFSUWkZ_2ew&t=226s" class="rounded-btn"><button>Watch Video</button></a>
+
+                </div>
+            </div>
+
+
+            <div class="card-divider"></div>
+
+            <div class="navigation-card cd1 vivify fadeIn delay-100 " data-aos="fade-up">
+
+                <h3 class="darkmode" style="margin-left: 23px;">What's Your 17 Speak Life
+                </h3>
+                <a href="#">
+                    <div>
+                        <h4 class="darkmode" style="margin-left: 23px">
+
+                            Gulfport High Digital Media/WGTV
+                            | YouTube
+                        </h4>
+                    </div>
+                </a>
+
+                <img class="card-img" style="height:185px;" src="Images/Your17.jpg">
+
+                <div class="rounded-btn-wrapper" style="margin-bottom: 77px;width: 182px;"> <a href="https://www.youtube.com/watch?v=2AiksBU8bho" class="rounded-btn"><button>Watch Video</button></a>
+
+                </div>
+            </div>
+
+            <div class="spacer" style="height: 15px;"></div>
+        </div>
+
+
+
+
+
+        <div class="live-sect vivify fadeIn" style="margin-top: 41px;">
+
+            <div class="indicator-container">
+                <div class="indicator" style="width: 0px;">
+                    <div class="line-indicator vivify pullLeft duration-500"></div>
+                </div>
+            </div>
+
+            <iframe src="https://c.themediacdn.com/embed/media/O7sBCQ/OqvzSehCsA1/mrLrvlwsOOb_5?wmode=opaque" allowfullscreen></iframe>
+
+            <div class="navigation-card cd1 vivify fadeIn delay-100 " data-aos="fade-up">
+
+                <h3 class="darkmode" style="margin-left: 23px;">Live Stream
+                </h3>
+                <a href="#">
+                    <div>
+                        <h4 class="darkmode" style="margin-left: 23px">Presented By Admiral Nation.com | WGTV
+                        </h4>
+                    </div>
+                </a>
+
+
+
+                <div class="rounded-btn-wrapper" style="margin-top: 22px;margin-bottom: 77px;"> <a href="https://admiralnation.github.io/SHOP/" class="rounded-btn"><button>Shop Admiral Nation</button></a>
+                    <a href="https://www.admiralnation.com/archives/" class="rounded-btn"><button>View Archived Games</button></a></div>
+
+
+                <div class="card-btns">
+
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="athletic-sect">
+
+        <div class="horizontal-nav">
+            <div class="button-wrapper" style="width: 164px;"><button class="vivify popIn" id="btn-schedule" onclick="schedule()">Schedule</button><button class="vivify popIn" style="width: 84px;" onclick="site()">Athletic App</button></div>
+        </div>
+
+        <div class="calendar">
+            <div class="indicator-container">
+                <div class="indicator">
+                    <div class="line-indicator vivify pullLeft duration-500"></div>
+                </div>
+            </div>
+
+            <iframe class=" vivify fadeIn" src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=600&amp;wkst=2&amp;bgcolor=%23ffffff&amp;src=gulfportschools.org_g8kh79cr8sqbipejvm2c9bc0js%40group.calendar.google.com&amp;color=%23182C57&amp;ctz=America%2FChicago" style="border-width:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+        </div>
+
+
+
+        <div class="site">
+            <div class="indicator-container">
+                <div class="indicator" style="width: 0px;">
+                    <div class="line-indicator vivify pullLeft duration-500"></div>
+                </div>
+            </div>
+            <div class="navigation-card cd1 vivify fadeIn delay-100 " style="margin-top: -94px;" data-aos="fade-up">
+
+                <img class="card-icon" src="https://lh3.googleusercontent.com/Zazb-lbXIl-yginoG0rb5PfG3Ptc3Rh9rYspjg5ieHxbAm53w1OplF-ES4RNi8EQ4yg=s180-rw">
+
+                <h3 class="darkmode" style="margin-left: 23px;">Get The Gulfport Admirals Athletics App
+                </h3>
+                <a href="#">
+                    <div>
+                        <h4 class="darkmode" style="margin-left: 23px">By Mascot Media, LLC
+                        </h4>
+                    </div>
+                </a>
+
+
+                <img class="card-img" style="height:185px;" src="https://www.sunherald.com/latest-news/t8zgqo/picture219105860/alternates/FREE_1140/0927%20derick%20hall.jpg">
+
+                <p>Fans of the Admirals can now stay up to date around the clock from the convenience of their iOS or Android device. Can’t make it to the game? Watch the LIVE broadcast. Need to know the score of last night’s game? Use the app to find breaking news, rosters, upcoming games and much more.</p>
+
+                <div class="rounded-btn-wrapper"> <a href="https://play.google.com/store/apps/details?id=com.sidelineaccess.msgulfport&hl=en_US" class="rounded-btn"><button>Get It On Android</button></a>
+                    <a href="https://itunes.apple.com/us/app/gulfport-admirals-athletics/id1399724155?mt=8" class="rounded-btn"><button>Get It On IOS</button></a></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="meal-menu">
+
+        <div class="horizontal-nav">
+            <div class="button-wrapper"><button id="btn-lunch" class="vivify popIn" onclick="lunch()">Lunch</button><button class="vivify popIn" onclick="breakfast()">Breakfast</button></div>
+        </div>
+
+        <div class="meal-wrapper lunch-menu">
+            <div class="indicator-container">
+                <div class="indicator">
+                    <div class="line-indicator vivify pullLeft duration-500"></div>
+                </div>
+            </div><img class=" meal vivify fadeIn" src="Menu/MenuLunch.jpg.png">
+
+        </div>
+
+        <div class="meal-wrapper breakfast-menu">
+            <div class="indicator-container">
+                <div class="indicator" style="width: 0px;">
+                    <div class="line-indicator vivify pullLeft duration-500"></div>
+                </div>
+            </div><img style="top: -150px;" class=" meal vivify fadeIn" src="Menu/MenuBreakfast.jpg.png">
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="grades-sect vivify fadeIn">
+        <iframe src="https://261985.stiinformationnow.com/InformationNow/Login.aspx?ReturnUrl=%2fInformationNow%2fMobile%2fGradeBook.List.aspx"></iframe>
+    </div>
+
+
+
+
+
+
+    <div class="admiralnation-sect vivify fadeIn">
+
+        <iframe src="https://admiralnation.github.io/SHOP/All.html" autofocus></iframe>
+    </div>
+
+
+
+
+
+
+
+    <div class="search-sect">
+        <input class="search-input vivify fadeIn" style="padding-left:25px; " type="text" id="mySearch" onkeyup="myFunction()" placeholder="&emsp; Find A Teacher..." title="Type in a teacher">
+        <ul id="myMenu" class="teacher-list">
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="Acey, Randee - Special Education">Acey, Randee - Special Education</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/2050">Anderson, Faith - Math</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/2051">Archie, John - Physical Education</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/848">Austin, David - History</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/2052">Barry, Mary Kathryn - English</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1184">Batson, Shanna - English HHS</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/2053">Bauer, Michele - Special Education</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1719">Bennett, Stephanie - Science</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/849">Bodenhamer, Reynolds - History</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1187">Brawley, Clinton - Engineering/Robotics STEM</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/2054">Brenneis, Angela - Special Education</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1141">Brooks, Tania - Science</a></li>
+            <li><a style="text-decoration: none" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/780">Brown, Chad - Art</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/685">Brown, Jimi - Fine Arts</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/835">Buntyn, Ellen - Science</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/851">Bush, Jeffrey - History CAB</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1781">Callahan, Jennifer - Special Education</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/861">Carraway, Robin - Special Education</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/872">Caylor, Robert - Automotive Service Technology STEM</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Page/15838">Celentano, Shana - Librarian</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1775">Chambliss, Jacob - History</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1974">Cilliers, Glenda - ELL</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/816">Clark, Crystal - Math</a> </li>
+            <li> <a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/2055">Combs, Meaghan - Math</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/837">Cordray, Jack - Science HHS</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1587">Cordray, Sharon - Special Education</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1588">D'Angelo, Micky - Physical Education</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/862">Darden, Angelitta - Special Education</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/2056">Dedeaux, Heidi - Special Education</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/786">Dodson, Theary - Business</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1590">Dove, Kelsie - English</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/2186">Dukeman, Sarah - Choir</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1632">Dunlap, Jessica - Choir</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1928">Edwards, Daniele - Science</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/753">Elward, Kyle - Digital Media Technology</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/819">Estrada, Angie - Math</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1809">Ferreira, Sasha - Strings</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1179">Flores, Edith - Science</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1111">Gault, Nick - Academic Business</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/820">Gemelli, Mike - Math</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1929">Glass, Brooke - Health</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1783">Haarala, Zachary - Math</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1231">Hardin, Brad - History</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/789">Hart, Larry - Fine Arts</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/854">Hatch, Savannah - History</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1793">Helms, Kevin-Michael - History</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/2057">Henshaw, Andrea - History</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1937">Holman, Rachael - Law and Safety</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1784">Hoye, Emily - Science</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/839">Hoyt, Bruce - Science</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/874">Huffman, Dave - Construction Technology STEM</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1930">Hutchins, Jan - Science</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1976">Irwin, David - Odyssey</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1931">Kelley, Desiree - Math</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/2122">Knight, Violet - Special Eduation</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/2058">Ladner, Courtney - Special Education</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1932">Lahuta, Jennifer - Math</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1786">Lassabe, Lauren - History</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/2059">Latham, Courtnie - Science</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1503">Lawrence, Joseph - Science</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1222">Lee, Amy - Business Marketing CAB</a> </li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/802">Lee, Blanca - Spanish</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1828">Leska, Malgorzata - Strings</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1603">Lewakowski, Melinda - Health Science HHS</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1595">Lewis, Chelsea - History</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/793">Lopez, Jessica - English</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1230">Lopez, John - History</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1173">Lynch, Treasure - Math</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1232">Martinez, Daniel - Fine Arts</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1726">McKenna, Tammy - Science</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/829">McMahon, James - Physical Education</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1620">Middleton, Reginald - History</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1596">Miller, Owen - Physical Education</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/785">Morehead, Westley - Fine Arts</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1229">Myrick, Kelsey - Science</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/813">Neumann, Alan - ROTC</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/814">Owens, John - ROTC</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1180">Payne, Meredith - English</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/782">Pecoul, Laura - Art</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/843">Pfaff, Scott - Science STEM</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/740">Pitts, Dee Dee - Fine Arts</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/783">Polson, Marshall - Art</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/794">Pryor, Christopher - English</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1788">Rodriguez, Danielle - Culinary Arts</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/846">Rogers, Amanda - Science</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/795">Rogers, Beth - English</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/796">Rogers, Wesley - English</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/797">Salminen, Tina - English</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1934">Sheckart, Rachel - Art</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1804">Smith, Courtney - Health and Cheerleading</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1228">Spann, Lori - English</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/803">Speck, Lisa - Special Education</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1935">Swinney, Cassidy - English</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/2061">Swinney, Jacob - Science</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1629">Switzer, Hale - Science CAB</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1059">Tarter, Lorelei - Math CAB</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/804">Taylor, Barrett - French</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/858">Thames, Hardy - History</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/787">Tucker, Charles - Business Marketing CAB</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/2063">Turner, Bradford - Special Education</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/824">Ulrich, Courtney - Math</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1789">Vernon, Daniel - Choir</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1227">Vonder Bruegge, Nicole - English</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1178">Wadsworth, Patrick - English STEM</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1936">Wedgeworth, Natalie - Math</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/825">Wedgeworth, Scott - Math STEM</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1791">Wetherington, Alanna - Special Education</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/867">Wetzel, Kristy - Special Eduaction</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/826">White, Glenn - Math</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1605">White, Katheryn - English</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1801">Wilson, Beth - Education and Training HHS</a></li>
+            <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1792">Wilson, James - Math</a></li>
+            <li><a style="text-decoration: none;" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/1977">Woodberry, Michele - Physical Education</a></li>
+
+        </ul>
+
+    </div>
+
+
+
+
+
+
+
+    <div class="kahoot-sect vivify fadeIn delay-300"><iframe src="https://kahoot.it/"></iframe></div>
+
+
+
+    <script src="script.js">
+
+
+    </script>
+    <script>
+        AOS.init();
+
+    </script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+    </script>
+    <script src="sw.js"></script>
+    <script src="Service-Worker.js"></script>
+    <script>
+        (function() {
+            var v = document.getElementsByClassName("youtube-player");
+            for (var n = 0; n < v.length; n++) {
+                v[n].onclick = function() {
+                    var iframe = document.createElement("iframe");
+                    iframe.setAttribute("src", "//www.youtube.com/embed/" + this.dataset.id + "?autoplay=1&autohide=2&border=0&wmode=opaque&enablejsapi=1&rel=" + this.dataset.related + "&controls=" + this.dataset.control + "&showinfo=" + this.dataset.info);
+                    iframe.setAttribute("frameborder", "0");
+                    iframe.setAttribute("id", "youtube-iframe");
+                    iframe.setAttribute("style", "width: 100%; height: 100%; position: absolute; top: 0; left: 0;");
+                    if (this.dataset.fullscreen == 1) {
+                        iframe.setAttribute("allowfullscreen", "");
+                    }
+                    while (this.firstChild) {
+                        this.removeChild(this.firstChild);
+                    }
+                    this.appendChild(iframe);
+                };
+            }
+        })();
+
+    </script>
+
+
+
+    <main class="main" style="display: none">
+        <div class="card cardTemplate weather-forecast" hidden>
+            <div class="city-key" hidden></div>
+            <div class="card-last-updated" hidden></div>
+            <div class="location"></div>
+            <div class="date"></div>
+            <div class="description"></div>
+            <div class="current">
+                <div class="visual">
+                    <div class="icon"></div>
+                    <div class="temperature">
+                        <span class="value"></span><span class="scale">°F</span>
+                    </div>
+                </div>
+                <div class="description">
+                    <div class="humidity"></div>
+                    <div class="wind">
+                        <span class="value"></span>
+                        <span class="scale">mph</span>
+                        <span class="direction"></span>°
+                    </div>
+                    <div class="sunrise"></div>
+                    <div class="sunset"></div>
+                </div>
+            </div>
+            <div class="future">
+                <div class="oneday">
+                    <div class="date"></div>
+                    <div class="icon"></div>
+                    <div class="temp-high">
+                        <span class="value"></span>°
+                    </div>
+                    <div class="temp-low">
+                        <span class="value"></span>°
+                    </div>
+                </div>
+                <div class="oneday">
+                    <div class="date"></div>
+                    <div class="icon"></div>
+                    <div class="temp-high">
+                        <span class="value"></span>°
+                    </div>
+                    <div class="temp-low">
+                        <span class="value"></span>°
+                    </div>
+                </div>
+                <div class="oneday">
+                    <div class="date"></div>
+                    <div class="icon"></div>
+                    <div class="temp-high">
+                        <span class="value"></span>°
+                    </div>
+                    <div class="temp-low">
+                        <span class="value"></span>°
+                    </div>
+                </div>
+                <div class="oneday">
+                    <div class="date"></div>
+                    <div class="icon"></div>
+                    <div class="temp-high">
+                        <span class="value"></span>°
+                    </div>
+                    <div class="temp-low">
+                        <span class="value"></span>°
+                    </div>
+                </div>
+                <div class="oneday">
+                    <div class="date"></div>
+                    <div class="icon"></div>
+                    <div class="temp-high">
+                        <span class="value"></span>°
+                    </div>
+                    <div class="temp-low">
+                        <span class="value"></span>°
+                    </div>
+                </div>
+                <div class="oneday">
+                    <div class="date"></div>
+                    <div class="icon"></div>
+                    <div class="temp-high">
+                        <span class="value"></span>°
+                    </div>
+                    <div class="temp-low">
+                        <span class="value"></span>°
+                    </div>
+                </div>
+                <div class="oneday">
+                    <div class="date"></div>
+                    <div class="icon"></div>
+                    <div class="temp-high">
+                        <span class="value"></span>°
+                    </div>
+                    <div class="temp-low">
+                        <span class="value"></span>°
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="dialog-container" style="display:none;margin-top: -400px;">
+        <div class="dialog">
+            <div class="dialog-title">Add new city</div>
+            <div class="dialog-body">
+                <select id="selectCityToAdd">
+
+                    <option value="2357536">Austin, TX</option>
+                    <option value="2367105">Boston, MA</option>
+                    <option value="2379574">Chicago, IL</option>
+                    <option value="2459115">New York, NY</option>
+                    <option value="2475687">Portland, OR</option>
+                    <option value="2487956">San Francisco, CA</option>
+                    <option value="2490383">Seattle, WA</option>
+                </select>
+            </div>
+            <div class="dialog-buttons" style="display: none">
+                <button id="butAddCity" class="button">Add</button>
+                <button id="butAddCancel" class="button">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="loader" style="display:none">
+        <svg viewBox="0 0 32 32" width="32" height="32">
+            <circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
+        </svg>
+    </div>
+
+
+    <script src="scripts/app.js" async></script>
+
+</body>
+
+</html>
