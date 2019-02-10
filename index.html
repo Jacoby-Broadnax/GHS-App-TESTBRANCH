@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 
@@ -36,15 +34,12 @@
 </head>
 
 <body>
+    <button class="menu-cover" onclick="collapse()">
 
-    <header class="header" style="display:none;">
-        <h1 class="header__title">GHS App Developer Mode</h1>
-        <button id="butRefresh" class="headerButton" aria-label="Refresh"></button>
-        <button id="butAdd" class="headerButton" aria-label="Add"></button>
-    </header>
+    </button>
 
 
-    <div class="hamburger-menu vivify fadeInBottom duration-300 " style="height: 484px;">
+    <div class="hamburger-menu vivify fadeInBottom duration-300 ">
 
 
 
@@ -54,18 +49,19 @@
 
 
 
+            <h4>GHS App</h4>
+            <p>Quick Menu</p>
+
+            <button onclick="collapse()"><i class="material-icons">close</i></button>
 
 
-            <div class="options-sect" style="margin: auto;width: 64px;">
-                <img style="margin: auto;width: 54px;margin-top: 0px;margin-bottom: -10px;" src="Branding/512px%20logo.png">
-
-            </div>
-            <div class="card-divider" style="margin-bottom: -9px;margin-top: 4px"></div>
 
             <div class="options-sect" onclick="kahoot()">
                 <button>
+                    <i class="menu-icon material-icons">
+                        gamepad</i>
                     <h3>Play Kahoot!</h3>
-                    <p>Kahoot.it</p>
+
                 </button>
 
             </div>
@@ -74,17 +70,11 @@
 
             <div class="options-sect" onclick="admiral()">
                 <button>
+                    <i class="menu-icon material-icons">
+
+                        shopping_cart</i>
                     <h3>Shop School Store</h3>
-                    <p>AdmiralNation.com</p>
-                </button>
 
-            </div>
-
-
-            <div class="options-sect" onclick="grades()">
-                <button>
-                    <h3>Check My Grades</h3>
-                    <p>Powered By Chalkable</p>
                 </button>
 
             </div>
@@ -92,17 +82,36 @@
 
             <div class="options-sect" onclick="mealmenu()">
                 <button onclick="meal()">
+                    <i class="menu-icon material-icons">
+
+                        restaurant</i>
                     <h3>Meal Menu</h3>
-                    <p>February</p>
+
                 </button>
 
             </div>
 
-            <a href="https://payments.efundsforschools.com/v3/districts/56099" target="_blank">
-                <div class="options-sect" onclick="mealmenu()">
+
+
+
+            <a href="https://261985.stiinformationnow.com/InformationNow/Login.aspx?ReturnUrl=%2fInformationNow%2fMobile%2fGradeBook.List.aspx">
+                <div class="options-sect" onclick="grades()">
                     <button>
+                        <i class="material-icons menu-icon">school</i>
+                        <h3>Check My Grades</h3>
+
+                    </button>
+
+                </div>
+            </a>
+
+
+            <a href="https://payments.efundsforschools.com/v3/districts/56099" target="_blank">
+                <div class="options-sect">
+                    <button>
+                        <i class="material-icons menu-icon">credit_card</i>
                         <h3>Pay Fees/Lunch</h3>
-                        <p>E-Funds for schools</p>
+
                     </button>
 
                 </div>
@@ -111,30 +120,28 @@
         </div>
 
 
-
     </div>
 
 
 
 
 
-    <div class="top-navigation">
 
-
-    </div>
-
-    <div class="menu-button"><button onclick="expand()" class="vivify popIn delay-350"><img src="Assets/Menu%20Button.svg"></button><button style="color: black;" class="close vivify popIn" onclick="collapse()"><i class="material-icons" id="search">close</i></button></div>
+    <div class="menu-button"><button onclick="expand()" class="vivify popInBottom delay-500 "><i style="font-size: 28px;color: #012395;" class="material-icons">
+                keyboard_arrow_up</i></button></div>
 
 
     <div class="bottom-navigation">
         <div class="button-items">
-            <button onclick="leftpress()"><img id="leftbtn" src="Assets/Media.svg"></button>
+            <button onclick="leftpress()"><i class="material-icons">play_circle_outline</i></button>
 
-            <button onclick="homepress()"><img id="home" src="Assets/Home.svg"></button>
+            <button onclick="homepress()"><i class="material-icons">home</i></button>
 
-            <button style="margin-left: 50px;" onclick="searchopen()"><img id="home" src="Assets/Search.svg"></button>
+            <div class="horizontal-spacer"></div>
 
-            <button onclick="rightpress()"><img id="rightbtn" src="Assets/Athletics.svg"></button>
+            <button onclick="searchopen()"><i class="material-icons">search</i></button>
+
+            <button onclick="rightpress()"><i class="material-icons">fitness_center</i></button>
 
 
 
@@ -150,9 +157,9 @@
 
 
         <div class="header-base">
-            <h1 class="vivify popOut delay-1500" style="position:fixed;width:100%;background-color:white;">Gulfport High School App</h1>
-            <h1>Developer Mode</h1>
-            <div class="card-divider" style="margin-top:17px;"></div>
+            <div class="logo-wrapper"><img src="Assets/G%20Logo%20BTN.svg"></div>
+
+
         </div>
 
 
@@ -160,20 +167,27 @@
         <div class="spacer"></div>
 
 
-        <div class="navigation-card cd1 vivify fadeIn delay-100 event" data-aos="fade-up">
 
-            <h3 class="darkmode" style="margin-left: 23px;">Off Mice And Men | Admiral Theatre
+
+
+        <div class="navigation-card cd1 vivify fadeIn delay-100 promote" data-aos="fade-up">
+
+            <h3 class="darkmode" style="margin-left: 23px;">Teachers Of The Month
             </h3>
             <a href="#">
                 <div>
-                    <h4 class="darkmode" style="margin-left: 23px">Date: March 21-22, 2019
+                    <h4 class="darkmode" style="margin-left: 23px">January
                     </h4>
                 </div>
             </a>
 
-            <img class="card-img" style="height:185px;" src="Images/miceandmen.jpeg">
-            <p class="p-plus ">Based on the classic novella written by John Steinbeck, Of Mice and Men tells the tale of two great friends and their struggle to live the American dream. George and Lennie have been traveling together from ranch to ranch for years, working hard to make ends meet and save enough for a place of their own. <span class="more"> The two are polar opposites: George is intelligent, quick and small, while Lennie is slow-minded, childlike, and tall. Though they are different, they care deeply about each other. They have been dreaming for years to save enough for a little land of their own when they are both hired to a new job they believe that they may finally achieve their goal. But trouble begins to brew when one of the bosses' wife becomes too interested in the infatuated Lennie. Tragic, yet beautiful, Of Mice and Men is the extremely popular play that has become a staple of American theatre.
-                </span><button onclick="viewmore()" class="more-btn">Read More</button><button onclick="viewless()" class="less-btn">Read Less</button> </p>
+            <div class="card-img">
+                <div class="admiral-ad"><a href="https://www.gulfportschools.org/Domain/816"><img style="height: 234px; border: none;object-fit: cover" src="images/Teacher of the Month Photo Mrs. Clark.jpg"></a><a href="https://www.gulfportschools.org/Domain/1620"><img style="height: 234px;border: none; object-fit: cover" src="images/MEawesome.png"></a></div>
+
+            </div>
+            <p style="margin-top: 50px;">Congratulations to two incredible teachers <b>Mrs.Clark</b> and <b>Mr.Middleton</b>. </p>
+
+
 
             <div class="card-btns">
 
@@ -194,26 +208,54 @@
 
 
 
+        <div class="navigation-card cd1 vivify fadeIn delay-100 event" data-aos="fade-up">
 
-
-        <div class="navigation-card cd1 vivify fadeIn delay-100 test" data-aos="fade-up">
-
-            <h3 class="darkmode" style="margin-left: 23px;">11th Grade ACT Test
+            <h3 class="darkmode" style="margin-left: 23px;">Cookie Fundraiser | Annual Staff
             </h3>
             <a href="#">
                 <div>
-                    <h4 class="darkmode" style="margin-left: 23px">Date: Feb 20th
+                    <h4 class="darkmode" style="margin-left: 23px">Date: February 14th
+                    </h4>
+                </div>
+            </a>
+            <img class="card-img" src="images/Cookie_Tray.png">
+            <p>If you would like a Chick-Fil-A cookie delivered to you or a special someone on Valentine’s Day, preorder now during all lunches in the cafeteria!!! The cookies are $2 and will be delivered during second block on February 14th. See Annual Staff for details if you have questions. </p>
+
+            <div class="card-btns">
+
+
+
+            </div>
+        </div>
+
+
+        <div class="card-divider"></div>
+
+
+
+
+
+        <div class="navigation-card cd1 vivify fadeIn delay-100 help" data-aos="fade-up">
+
+            <h3 class="darkmode" style="margin-left: 23px;">Act 2019
+            </h3>
+            <a href="#">
+                <div>
+                    <h4 class="darkmode" style="margin-left: 23px">GHS App
                     </h4>
                 </div>
             </a>
 
-            <img class="card-img" style="height:185px;" src="Images/act.jpg">
-
-
-            <div class="rounded-btn-wrapper" style="margin-bottom: 77px;width: 182px; "> <a href="http://www.act.org/" class="rounded-btn"><button>Act.org</button></a>
+            <div class="swipe-menu"><img src="images/act.jpeg" /><img src="images/act10th.svg" /><img src="images/act11th.svg" />
 
             </div>
+
+
+
+
+            <div class="rounded-btn-wrapper" style="margin-bottom: 77px;width: 182px; "> <a href="http://www.act.org/" class="rounded-btn"><button>Act.org</button></a></div>
         </div>
+
 
 
 
@@ -311,11 +353,85 @@
             </div>
         </div>
 
+
+
+
+
+
+
+
         <div class="card-divider"></div>
 
 
 
 
+
+
+
+
+        <div class="navigation-card cd1 vivify fadeIn delay-100 event" data-aos="fade-up">
+
+            <h3 class="darkmode" style="margin-left: 23px;">Off Mice And Men | Admiral Theatre
+            </h3>
+            <a href="#">
+                <div>
+                    <h4 class="darkmode" style="margin-left: 23px">Date: March 21-22, 2019
+                    </h4>
+                </div>
+            </a>
+
+            <img class="card-img" style="height:185px;" src="Images/miceandmen.jpeg">
+            <p class="p-plus ">Based on the classic novella written by John Steinbeck, Of Mice and Men tells the tale of two great friends and their struggle to live the American dream. George and Lennie have been traveling together from ranch to ranch for years, working hard to make ends meet and save enough for a place of their own. <span class="more"> The two are polar opposites: George is intelligent, quick and small, while Lennie is slow-minded, childlike, and tall. Though they are different, they care deeply about each other. They have been dreaming for years to save enough for a little land of their own when they are both hired to a new job they believe that they may finally achieve their goal. But trouble begins to brew when one of the bosses' wife becomes too interested in the infatuated Lennie. Tragic, yet beautiful, Of Mice and Men is the extremely popular play that has become a staple of American theatre.
+                </span><button onclick="viewmore()" class="more-btn">Read More</button><button onclick="viewless()" class="less-btn">Read Less</button> </p>
+
+            <div class="card-btns">
+
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <div class="card-divider"></div>
+
+
+
+
+
+
+        <div class="navigation-card cd1 vivify fadeIn delay-100 event" data-aos="fade-up">
+
+            <h3 class="darkmode" style="margin-left: 23px;">Junior Senior Prom
+            </h3>
+            <a href="#">
+                <div>
+                    <h4 class="darkmode" style="margin-left: 23px">Date: March 23, 2019
+                    </h4>
+                </div>
+            </a>
+
+            <img class="card-img" style="height:185px;" src="https://static.wixstatic.com/media/f2d820_a73e65d42cf74274a576dd1fe041de8a.jpg/v1/fill/w_1009,h_757,al_c,q_90,usm_0.66_1.00_0.01/f2d820_a73e65d42cf74274a576dd1fe041de8a.webp">
+            <p>Tickets $30 per person includes: Keepsake cup & invitation, 5x7 professional photos, snacks & drinks at event. </p>
+
+            <div class="rounded-btn-wrapper" style="margin-bottom: 77px; "> <a href="https://goo.gl/maps/G21zqLxYVy32" class="rounded-btn" target="_blank"><button>View On Maps</button></a><a href="http://www.climbcdc.org/event-centre" class="rounded-btn" target="_blank"><button>Visit Site</button></a>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <div class="card-divider"></div>
 
 
 
@@ -353,7 +469,7 @@
 
 
 
-        <div class="navigation-card cd1 vivify fadeIn delay-100 promote" data-aos="fade-up">
+        <div class="navigation-card cd1 vivify fadeIn delay-100 help" data-aos="fade-up">
 
             <h3 class="darkmode" style="margin-left: 23px;">Shop Admiral Nation On GHS App
             </h3>
@@ -364,53 +480,27 @@
                 </div>
             </a>
 
-            <div class="card-img">
-                <div class="admiral-ad"><a href="https://admiralnation.github.io/SHOP/tops_gucci1.html"><img src="ShopItems/Gucci%20Thumbnail1.jpg"></a><a href="https://admiralnation.github.io/SHOP/tops_zippullover.html"><img src="ShopItems/Quarter%20Zip%20Thumbnail.jpg"></a></div>
-
-            </div>
-            <p style="margin-top: 50px;">Tap the G button or visit Admiralnation.com</p>
-
-            <div class="rounded-btn-wrapper" style="margin-bottom: 77px;width: 182px;"><a href="#" class="rounded-btn"><button onclick="admiral()">View In App</button></a>
-
+            <div class="swipe-menu"><img src="ShopItems/Gucci%20Thumbnail1.jpg" /><img src="ShopItems/Quarter%20Zip%20Thumbnail.jpg" /><img src="ShopItems/Beanie%20Thumbnail.jpg" />
+                <img src="ShopItems/Long%20sleeve%20T-Shirt1%20Thumbnail.jpg" />
+                <img src="ShopItems/Stadium%20Seat%20Thumbnail.jpg" />
+                <img src="ShopItems/Sweatshirt%20Thumbnail.jpg" />
             </div>
 
-            <div class="card-btns">
 
 
+
+            <div class="rounded-btn-wrapper" style="margin-bottom: 77px;width: 182px;"><a href="#" class="rounded-btn"><button onclick="admiral()">View More</button></a>
 
             </div>
         </div>
 
 
-        <div class="card-divider"></div>
 
 
 
 
 
 
-
-
-
-
-        <div class="navigation-card cd1 vivify fadeIn delay-100 test" data-aos="fade-up">
-
-            <h3 class="darkmode" style="margin-left: 23px;">10th Grade ACT Test
-            </h3>
-            <a href="#">
-                <div>
-                    <h4 class="darkmode" style="margin-left: 23px">Date: March 12th
-                    </h4>
-                </div>
-            </a>
-
-            <img class="card-img" style="height:185px;" src="Images/act.jpg">
-
-
-            <div class="rounded-btn-wrapper" style="margin-bottom: 77px;width: 182px; "> <a href="http://www.act.org/" class="rounded-btn"><button>Act.org</button></a>
-
-            </div>
-        </div>
 
 
         <div class="card-divider"></div>
@@ -436,13 +526,9 @@
             </a>
 
             <img class="card-img" style="height:185px;" src="Images/grades.jpeg">
-            <p>Tap the G button on the navigation bar.</p>
-
-            <div class="card-btns">
+            <p>Tap the up arrow on the navigation bar.</p>
 
 
-
-            </div>
         </div>
 
 
@@ -490,37 +576,6 @@
 
 
 
-        <div class="navigation-card cd1 vivify fadeIn delay-100 help" data-aos="fade-up">
-
-            <h3 class="darkmode" style="margin-left: 23px;">Place Holder
-            </h3>
-            <a href="#">
-                <div>
-                    <h4 class="darkmode" style="margin-left: 23px">Place Holder
-                    </h4>
-                </div>
-            </a>
-
-            <div class="swipe-menu"><img src="https://via.placeholder.com/150x200?text=Visit+Blogging.com+Now
-
-C/O https://placeholder.com/"/><img src="https://via.placeholder.com/150x200?text=GHS+App+TestBranc
-
-C/O https://placeholder.com/"/><img src="https://via.placeholder.com/150x200?text=Visit+Blogging.com+Now
-
-C/O https://placeholder.com/"/><img src="https://via.placeholder.com/150x200?text=Visit+Blogging.com+Now
-
-C/O https://placeholder.com/"/><img src="https://via.placeholder.com/150x200?text=Visit+Blogging.com+Now
-
-C/O https://placeholder.com/"/></div>
-    
-
-           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lobortis imperdiet augue, eget pulvinar magna elementum sit amet. Pellentesque condimentum quam non scelerisque aliquet. In sit amet erat nibh. </p>
-        </div>
-
-
-
-
-        <div class="card-divider"></div>
 
 
 
@@ -747,12 +802,12 @@ C/O https://placeholder.com/"/></div>
     <div class="athletic-sect">
 
         <div class="horizontal-nav">
-            <div class="button-wrapper" style="width: 164px;"><button class="vivify popIn" id="btn-schedule" onclick="schedule()">Schedule</button><button class="vivify popIn" style="width: 84px;" onclick="site()">Athletic App</button></div>
+            <div class="button-wrapper" style="width: 169px;"><button class="vivify popIn" id="btn-schedule" onclick="schedule()">Schedule</button><button class="vivify popIn" style="width: 84px;" onclick="site()">Athletic App</button></div>
         </div>
 
         <div class="calendar">
-            <div class="indicator-container">
-                <div class="indicator">
+            <div class="indicator-container ">
+                <div class="indicator" style="width: 162px;">
                     <div class="line-indicator vivify pullLeft duration-500"></div>
                 </div>
             </div>
@@ -995,7 +1050,6 @@ C/O https://placeholder.com/"/></div>
     </script>
     <script>
         AOS.init();
-
     </script>
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1007,7 +1061,6 @@ C/O https://placeholder.com/"/></div>
                 });
             });
         });
-
     </script>
     <script src="sw.js"></script>
     <script src="Service-Worker.js"></script>
@@ -1031,141 +1084,8 @@ C/O https://placeholder.com/"/></div>
                 };
             }
         })();
-
     </script>
 
-
-
-    <main class="main" style="display: none">
-        <div class="card cardTemplate weather-forecast" hidden>
-            <div class="city-key" hidden></div>
-            <div class="card-last-updated" hidden></div>
-            <div class="location"></div>
-            <div class="date"></div>
-            <div class="description"></div>
-            <div class="current">
-                <div class="visual">
-                    <div class="icon"></div>
-                    <div class="temperature">
-                        <span class="value"></span><span class="scale">°F</span>
-                    </div>
-                </div>
-                <div class="description">
-                    <div class="humidity"></div>
-                    <div class="wind">
-                        <span class="value"></span>
-                        <span class="scale">mph</span>
-                        <span class="direction"></span>°
-                    </div>
-                    <div class="sunrise"></div>
-                    <div class="sunset"></div>
-                </div>
-            </div>
-            <div class="future">
-                <div class="oneday">
-                    <div class="date"></div>
-                    <div class="icon"></div>
-                    <div class="temp-high">
-                        <span class="value"></span>°
-                    </div>
-                    <div class="temp-low">
-                        <span class="value"></span>°
-                    </div>
-                </div>
-                <div class="oneday">
-                    <div class="date"></div>
-                    <div class="icon"></div>
-                    <div class="temp-high">
-                        <span class="value"></span>°
-                    </div>
-                    <div class="temp-low">
-                        <span class="value"></span>°
-                    </div>
-                </div>
-                <div class="oneday">
-                    <div class="date"></div>
-                    <div class="icon"></div>
-                    <div class="temp-high">
-                        <span class="value"></span>°
-                    </div>
-                    <div class="temp-low">
-                        <span class="value"></span>°
-                    </div>
-                </div>
-                <div class="oneday">
-                    <div class="date"></div>
-                    <div class="icon"></div>
-                    <div class="temp-high">
-                        <span class="value"></span>°
-                    </div>
-                    <div class="temp-low">
-                        <span class="value"></span>°
-                    </div>
-                </div>
-                <div class="oneday">
-                    <div class="date"></div>
-                    <div class="icon"></div>
-                    <div class="temp-high">
-                        <span class="value"></span>°
-                    </div>
-                    <div class="temp-low">
-                        <span class="value"></span>°
-                    </div>
-                </div>
-                <div class="oneday">
-                    <div class="date"></div>
-                    <div class="icon"></div>
-                    <div class="temp-high">
-                        <span class="value"></span>°
-                    </div>
-                    <div class="temp-low">
-                        <span class="value"></span>°
-                    </div>
-                </div>
-                <div class="oneday">
-                    <div class="date"></div>
-                    <div class="icon"></div>
-                    <div class="temp-high">
-                        <span class="value"></span>°
-                    </div>
-                    <div class="temp-low">
-                        <span class="value"></span>°
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <div class="dialog-container" style="display:none;margin-top: -400px;">
-        <div class="dialog">
-            <div class="dialog-title">Add new city</div>
-            <div class="dialog-body">
-                <select id="selectCityToAdd">
-
-                    <option value="2357536">Austin, TX</option>
-                    <option value="2367105">Boston, MA</option>
-                    <option value="2379574">Chicago, IL</option>
-                    <option value="2459115">New York, NY</option>
-                    <option value="2475687">Portland, OR</option>
-                    <option value="2487956">San Francisco, CA</option>
-                    <option value="2490383">Seattle, WA</option>
-                </select>
-            </div>
-            <div class="dialog-buttons" style="display: none">
-                <button id="butAddCity" class="button">Add</button>
-                <button id="butAddCancel" class="button">Cancel</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="loader" style="display:none">
-        <svg viewBox="0 0 32 32" width="32" height="32">
-            <circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
-        </svg>
-    </div>
-
-
-    <script src="scripts/app.js" async></script>
 
 </body>
 
