@@ -38,6 +38,7 @@
   }
 
   function collapse() {
+      searchsect[0].style.display = "none";
       hammenu[0].style.display = "none";
 
       document.getElementsByClassName("menu-cover")[0].style.display = "none";
