@@ -1059,7 +1059,11 @@ card-btns > button > a {
     display: none;
     position: fixed;
     top: 0px;
-    z-index: 55
+    z-index: 55;
+    background-color: rgba(0, 0, 0, 0.6);
+    ;
+    width: 100%;
+    height: 100%;
 }
 
 .search-input {

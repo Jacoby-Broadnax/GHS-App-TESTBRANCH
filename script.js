@@ -221,7 +221,7 @@
       searchsect[0].style.display = "block";
 
       document.getElementById("mySearch").focus();
-
+      document.getElementsByClassName("univ-menu")[0].style.display = "none";
   }
 
 
