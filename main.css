@@ -653,6 +653,43 @@ card-btns > button > a {
     color: #012395;
 }
 
+.search-link {
+    position: fixed;
+    left: 0px;
+    width: 100%;
+    top: 9px;
+    z-index: 55;
+}
+
+.search-base {
+    margin: auto;
+    width: 345px;
+    height: 50px;
+    background-color: white;
+    border-radius: 31px;
+}
+
+.search-base > button > i {
+    float: left;
+    margin-left: 117px;
+    margin-top: 11px;
+}
+
+.search-base > button {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+}
+
+.univ-menu {
+    display: none;
+}
+
+.search-base > button > p {
+    float: left;
+    margin-top: 16px;
+    margin-left: 17px;
+}
 
 .quick-access {
     position: fixed;
@@ -660,6 +697,7 @@ card-btns > button > a {
 
     z-index: 52;
     bottom: 362px;
+
 }
 
 .quick-link > button > i {

@@ -32,7 +32,7 @@
       hammenu[0].style.display = "block";
 
       document.getElementsByClassName("menu-cover")[0].style.display = "block";
-      document.getElementsByClassName("quick-access")[0].style.display = "block";
+      document.getElementsByClassName("univ-menu")[0].style.display = "block";
       close[0].style.display = "block";
 
   }
@@ -41,7 +41,7 @@
       hammenu[0].style.display = "none";
 
       document.getElementsByClassName("menu-cover")[0].style.display = "none";
-      document.getElementsByClassName("quick-access")[0].style.display = "none";
+      document.getElementsByClassName("univ-menu")[0].style.display = "none";
       close[0].style.display = "none";
 
   }
