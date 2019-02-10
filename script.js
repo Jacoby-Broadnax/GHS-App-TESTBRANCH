@@ -157,7 +157,7 @@
       admiralnationsect[0].style.display = "none";
       document.getElementsByClassName("menu-cover")[0].style.display = "none";
       close[0].style.display = "none";
-
+      searchsect[0].style.display = "none";
 
   }
 
@@ -175,7 +175,7 @@
       admiralnationsect[0].style.display = "block";
       document.getElementsByClassName("menu-cover")[0].style.display = "none";
       close[0].style.display = "none";
-
+      searchsect[0].style.display = "none";
 
   }
 
@@ -193,7 +193,7 @@
       admiralnationsect[0].style.display = "none";
       close[0].style.display = "none";
       document.getElementsByClassName("menu-cover")[0].style.display = "none";
-
+      searchsect[0].style.display = "none";
   }
 
   function meal() {

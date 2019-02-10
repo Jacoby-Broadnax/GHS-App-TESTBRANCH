@@ -34,13 +34,16 @@
 </head>
 
 <body>
-    <button class="menu-cover " onclick="collapse()">
-
-    </button>
 
     <div class="univ-menu">
+
+        <button class="menu-cover " onclick="collapse()">
+
+        </button>
+
+
         <div class="search-link">
-            <div class="search-base"><button><i class="material-icons">search</i>
+            <div class="search-base"><button onclick="searchopen()"><i class="material-icons">search</i>
                     <p>Search</p>
                 </button></div>
         </div>
@@ -65,99 +68,99 @@
 
             </div>
         </div>
-    </div>
-
-
-    <div class="hamburger-menu vivify fadeInBottom duration-300 ">
 
 
 
-
-
-        <div class="options">
-
-
-
-            <h4>GHS App</h4>
-            <p>Quick Menu</p>
-
-            <button onclick="collapse()"><i class="material-icons">close</i></button>
-
-
-            <a href="https://261985.stiinformationnow.com/InformationNow/Login.aspx?ReturnUrl=%2fInformationNow%2fMobile%2fGradeBook.List.aspx">
-                <div class="options-sect" onclick="grades()">
-                    <button>
-                        <i class="material-icons menu-icon">school</i>
-                        <h3>Check My Grades</h3>
-
-                    </button>
-
-                </div>
-            </a>
-
-
-
-            <div class="options-sect" onclick="mealmenu()">
-                <button onclick="meal()">
-                    <i class="menu-icon material-icons">
-
-                        restaurant</i>
-                    <h3>Meal Menu</h3>
-
-                </button>
-
-            </div>
-
-
-            <div class="options-sect" onclick="kahoot()">
-                <button>
-                    <i class="menu-icon material-icons">
-                        gamepad</i>
-                    <h3>Play Kahoot!</h3>
-
-                </button>
-
-            </div>
-
-
-
-            <div class="options-sect" onclick="admiral()">
-                <button>
-                    <i class="menu-icon material-icons">
-
-                        shopping_cart</i>
-                    <h3>Shop School Store</h3>
-
-                </button>
-
-            </div>
+        <div class="hamburger-menu vivify fadeInBottom duration-300 ">
 
 
 
 
 
+            <div class="options">
 
 
 
+                <h4>GHS App</h4>
+                <p>Quick Menu</p>
 
-            <a href="https://payments.efundsforschools.com/v3/districts/56099" target="_blank">
-                <div class="options-sect">
-                    <button>
-                        <i class="material-icons menu-icon">credit_card</i>
-                        <h3>Pay Fees/Lunch</h3>
+                <button onclick="collapse()"><i class="material-icons">close</i></button>
+
+
+                <a href="https://261985.stiinformationnow.com/InformationNow/Login.aspx?ReturnUrl=%2fInformationNow%2fMobile%2fGradeBook.List.aspx">
+                    <div class="options-sect" onclick="grades()">
+                        <button>
+                            <i class="material-icons menu-icon">school</i>
+                            <h3>Check My Grades</h3>
+
+                        </button>
+
+                    </div>
+                </a>
+
+
+
+                <div class="options-sect" onclick="mealmenu()">
+                    <button onclick="meal()">
+                        <i class="menu-icon material-icons">
+
+                            restaurant</i>
+                        <h3>Meal Menu</h3>
 
                     </button>
 
                 </div>
-            </a>
+
+
+                <div class="options-sect" onclick="kahoot()">
+                    <button>
+                        <i class="menu-icon material-icons">
+                            gamepad</i>
+                        <h3>Play Kahoot!</h3>
+
+                    </button>
+
+                </div>
+
+
+
+                <div class="options-sect" onclick="admiral()">
+                    <button>
+                        <i class="menu-icon material-icons">
+
+                            shopping_cart</i>
+                        <h3>Shop School Store</h3>
+
+                    </button>
+
+                </div>
+
+
+
+
+
+
+
+
+
+                <a href="https://payments.efundsforschools.com/v3/districts/56099" target="_blank">
+                    <div class="options-sect">
+                        <button>
+                            <i class="material-icons menu-icon">credit_card</i>
+                            <h3>Pay Fees/Lunch</h3>
+
+                        </button>
+
+                    </div>
+                </a>
+
+            </div>
+
 
         </div>
 
 
     </div>
-
-
-
 
 
 
@@ -963,7 +966,7 @@
 
 
     <div class="search-sect">
-        <input class="search-input vivify fadeIn" style="padding-left:25px; " type="text" id="mySearch" onkeyup="myFunction()" placeholder="&emsp; Find A Teacher..." title="Type in a teacher">
+        <input class="search-input vivify popIn" style="padding-left:25px; " type="text" id="mySearch" onkeyup="myFunction()" placeholder="&emsp; Find A Teacher..." title="Type in a teacher">
         <ul id="myMenu" class="teacher-list">
             <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="Acey, Randee - Special Education">Acey, Randee - Special Education</a></li>
             <li><a style="text-decoration: none" target="_blank" class="vivify fadeIn" href="https://www.gulfportschools.org/Domain/2050">Anderson, Faith - Math</a></li>
