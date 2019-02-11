@@ -108,13 +108,13 @@ a {
 
 .swipe-menu > a > img:hover {
     width: 100%;
-    border-radius: 0px;
+    border-radius: 11px;
     height: 358px;
 }
 
 .swipe-menu > img:hover {
     width: 100%;
-    border-radius: 0px;
+    border-radius: 17px;
     height: 358px;
 }
 
