@@ -530,7 +530,7 @@ card-btns > button > a {
     object-fit: cover;
 
     border: none;
-   
+
 }
 
 
@@ -1082,10 +1082,11 @@ card-btns > button > a {
     top: 0px;
     background-color: white;
     z-index: 15;
+    border: none;
 }
 
 .search-input:focus {
-    outline-color: #012395;
+    outline: none;
 }
 
 .teacher-list {
