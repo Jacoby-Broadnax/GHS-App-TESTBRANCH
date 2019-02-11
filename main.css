@@ -82,7 +82,7 @@ a {
 
 .swipe-menu > img {
     margin-left: 10px;
-    border-radius: 6px;
+    border-radius: 12px;
     display: inline-block;
     height: 229px;
     object-fit: cover;
@@ -431,7 +431,7 @@ a {
 
 .navigation-card {
     margin: auto;
-    width: 353px;
+    width: 100%;
     transition: 0.5s ease;
 
 }
@@ -530,7 +530,7 @@ card-btns > button > a {
     object-fit: cover;
 
     border: none;
-    border-radius: 11px;
+   
 }
 
 
