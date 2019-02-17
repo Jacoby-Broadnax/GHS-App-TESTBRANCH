@@ -63,7 +63,7 @@ html {
     top: 0px;
     left: 0px;
     z-index: 40;
-    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
+
 }
 
 
@@ -113,17 +113,34 @@ html {
     transition: 0.3s ease;
 }
 
-.swipe-menu > a > i { margin-left: 8px;
+.quick > a > i {
+    float: left;
+    margin-top: 6px;
+    margin-left: 20px;
+    color: #012395;
+}
+
+.quick > a > p {
+    float: left;
+    margin-left: 9px;
+    margin-top: 8px;
+    color: #012395;
+}
+
+.swipe-menu > .quick {
+    margin-left: 8px;
     border-radius: 38px;
     display: inline-block;
-    
+    background-color: white;
     object-fit: cover;
-   
+
     border: solid;
     border-width: 1.3px;
     border-color: lightgray;
     transition: 0.3s ease;
-padding: 20px;}
+    width: 137px;
+    height: 38px;
+}
 
 .swipe-menu > a > img {
     margin-left: 10px;
