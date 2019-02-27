@@ -32,11 +32,13 @@ html::-webkit-scrollbar {
     width: 0 !important
 }
 
-
+summary:focus {outline: none; }
  
 .swipe-menu::-webkit-scrollbar {
     width: 0 !important
 }
+
+::-webkit-details-marker { display:none; }
 
 .sect-indicator {
     position: fixed;
@@ -497,7 +499,25 @@ html::-webkit-scrollbar {
 
 .audio-wrapper > audio {width:340px; }
 
+summary {margin: auto; width: 146px;}
 
+summary > div {margin: auto; width: 136px;background-color:#ffffff;border-radius: 50px;
+    
+    height: 41px;
+   
+    border: solid;
+    border-width: 1.3px;
+    border-color: lightgray;
+ margin-top: -20px;
+	
+    }
+
+summary > div > p {margin-left: 35px;margin-top: 13px;width: 136px;
+   font-size: 12px;font-weight: normal;
+   }
+
+
+ 
 
 
 
@@ -639,13 +659,14 @@ html::-webkit-scrollbar {
 }
 
 .navigation-card > p {
-    margin: auto;
-    width: 336px;
+    
+    width: 92%;;
     ;
     font-size: 14px;
     margin-top: 15px;
     line-height: 23px;
     transition: .3s ease;
+	margin-left: 20px;
 }
 
 .card-btns {
