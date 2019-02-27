@@ -32,6 +32,8 @@ html::-webkit-scrollbar {
     width: 0 !important
 }
 
+
+ 
 .swipe-menu::-webkit-scrollbar {
     width: 0 !important
 }
@@ -489,6 +491,11 @@ html::-webkit-scrollbar {
 
 
 
+.swipe-menu > audio {background-color: white; margin-left: 10px;}
+
+.audio-wrapper {margin:auto; width: 340px; }
+
+.audio-wrapper > audio {width:340px; }
 
 
 
@@ -633,7 +640,7 @@ html::-webkit-scrollbar {
 
 .navigation-card > p {
     margin: auto;
-    width: 90%;
+    width: 336px;
     ;
     font-size: 14px;
     margin-top: 15px;
@@ -723,6 +730,9 @@ card-btns > button > a {
     margin: auto;
     width: 345px;
 }
+
+.classic-cardivider {
+   width:100%; height:1.3px; background-color:lightgray}
 
 .card-divider {
     width: 100%;
@@ -1207,7 +1217,7 @@ card-btns > button > a {
 
     top: 0px;
     width: 100%;
-    height: 100%;
+    height: 90%;
     border: none;
     z-index: 15;
 
