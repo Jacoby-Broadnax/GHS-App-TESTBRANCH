@@ -497,7 +497,7 @@ summary:focus {outline: none; }
 
 .audio-wrapper {margin:auto; width: 90%;; }
 
-.audio-wrapper > audio {width:100%; }
+.audio-wrapper > audio {width:100%;height: 50px; }
 
 summary {margin: auto; width: 146px;}
 
