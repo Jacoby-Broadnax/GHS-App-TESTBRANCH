@@ -495,9 +495,9 @@ summary:focus {outline: none; }
 
 .swipe-menu > audio {background-color: white; margin-left: 10px;}
 
-.audio-wrapper {margin:auto; width: 340px; }
+.audio-wrapper {margin:auto; width: 90%;; }
 
-.audio-wrapper > audio {width:340px; }
+.audio-wrapper > audio {width:100%; }
 
 summary {margin: auto; width: 146px;}
 
