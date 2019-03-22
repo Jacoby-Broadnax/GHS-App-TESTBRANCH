@@ -52,6 +52,12 @@ summary:focus {outline: none; }
     width: 57px;
 }
 
+.calendar-btn {float: right; margin-top: -43px;}
+
+.calendar-btn >  img {width:135px; margin-top: -14px;float:right; }
+
+.calendar-btn > i {margin-right: -8px; color: black;}
+
 .sect-indicator > i {
     float: left;
     font-size: 22px;
@@ -124,7 +130,7 @@ summary:focus {outline: none; }
 .hamburger-menu {
     position: fixed;
     right: 0px;
-    bottom: 1px;
+    bottom: 0px;
     z-index: 56;
     width: 100%;
     background-color: white;
