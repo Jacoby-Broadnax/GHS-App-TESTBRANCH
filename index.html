@@ -65,7 +65,7 @@
 	
 <body>
 
-	<div class="splashscreen vivify delay-2500 fadeOut"><div class="splash-logo vivify fadeOut delay-2000"><img class="" style="left: 50%;
+	<div class="splashscreen vivify delay-2500 fadeOut" id="loader"><div class="splash-logo vivify fadeOut delay-2000"><img class="" style="left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);width: 40%;" src="Branding/Logo filled.svg"></div></div>
 	
@@ -222,7 +222,7 @@
 
 
 
-    <div class="homescreen vivify fadeIn delay-3250">
+    <div class="homescreen">
 
     
 
@@ -817,11 +817,11 @@ add_circle_outline</i><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:
                 </div>
             </div>
 			
-			<div class="navigation-card" style = "position:absolute; z-index: 0; left: 3px; top: 60px;  "><a href="" class="rounded-btn"><button style = " border-color: #efefef">Skip To Today</button></a></div>
+			<div class="navigation-card" style = "position:absolute; z-index: 1; left: 3px; top: 60px; "><div class="rounded-btn-wrapper" style="width: 180px;margin-top: 3px;"><a href="#lunchanchor" class="rounded-btn" ><button style = " border-color: #efefef">Skip To Today</button></a></div></div>
             
 			<div class="meal-wrapper"><img class=" meal " src="Menu/MarchLunch-min.png"></div>
 
-<div class="lunchanchor"></div>
+<div class="lunchanchor" id="lunchanchor"></div>
         </div>
 
         <div class="breakfast-menu">
@@ -1147,6 +1147,18 @@ add_circle_outline</i><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:
         }, false)
 
     </script>
+
+<script>
+
+
+
+window.setTimeout(loaded, 2650);
+
+var element = document.getElementById('loader');
+
+function loaded() {
+    element.style.display = 'none';
+}</script>
 </body>
 
 </html>
