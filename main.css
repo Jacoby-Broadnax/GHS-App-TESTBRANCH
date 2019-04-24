@@ -17,8 +17,9 @@ a {
 }
 
 body {
-    font-family: roboto, sans-serif;
+    font-family: sans-serif;
     margin: 0px;
+    transition: 0.4s ease;
 
 }
 
@@ -55,7 +56,7 @@ summary:focus {
     box-shadow: 0px 0px 13px -1px rgba(0, 0, 0, 0.4);
     border-radius: 37px;
     height: 57px;
-    width: 57px;
+    width: 122px;
 }
 
 .calendar-btn {
@@ -92,7 +93,7 @@ summary:focus {
     padding-right: 35px;
     font-weight: normal;
     color: #343434;
-    display: none;
+
 }
 
 .holiday {
@@ -130,8 +131,7 @@ summary:focus {
     top: -50px;
     left: 0px;
     z-index: 40;
-    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
-
+    =
 }
 
 
@@ -149,7 +149,6 @@ summary:focus {
     width: 93%;
     background-color: white;
     height: 352px;
-    ;
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
     display: none;
     border-radius: 15px;
@@ -408,6 +407,7 @@ summary:focus {
     margin-top: -25px;
     margin-bottom: 32px;
     margin-left: 20px;
+    color: black;
 }
 
 .options-sect > button:focus {
@@ -557,6 +557,7 @@ summary > div > p {
     width: 136px;
     font-size: 12px;
     font-weight: normal;
+    color: black;
 }
 
 
@@ -711,6 +712,7 @@ summary > div > p {
     line-height: 23px;
     transition: .3s ease;
     margin-left: 20px;
+    color: black;
 }
 
 .card-btns {
@@ -804,9 +806,8 @@ card-btns > button > a {
 
 .card-divider {
     width: 100%;
-    height: 16px;
-    background-color: linear-gradient(to right, rgba(212, 212, 212, 1) 0%, rgba(212, 212, 212, 1) 12%, rgba(245, 245, 245, 1) 92%, rgba(245, 245, 245, 1) 100%);
-    ;
+    height: 1px;
+
     ;
     filter: opacity(0.4);
     margin-top: 20px;
@@ -902,6 +903,7 @@ card-btns > button > a {
     float: left;
     margin-left: 15px;
     margin-top: 9px;
+    color: #012395;
 }
 
 .menu-button > button > p {
@@ -951,6 +953,7 @@ card-btns > button > a {
     float: left;
     margin-top: 16px;
     margin-left: 17px;
+    color: black;
 }
 
 .quick-access {
@@ -966,7 +969,7 @@ card-btns > button > a {
     color: #767676;
     float: left;
     padding-left: 9px;
-    margin-top: 4px;
+    margin-top: 1px;
 }
 
 .quick-link > button > p {
@@ -1003,10 +1006,10 @@ card-btns > button > a {
     width: 100%;
     height: 51px;
     background-color: white;
-    position: fixed;
+    position: sticky;
     top: 46px;
     box-shadow: -1px 9px 5px -5px rgba(0, 0, 0, 0.11);
-    z-index: 43;
+    z-index: 39;
 }
 
 .button-wrapper > button {
@@ -1169,7 +1172,7 @@ card-btns > button > a {
 .calendar {
     position: fixed;
     width: 100%;
-    top: 0px;
+    top: 100px;
     height: 100%;
 }
 
@@ -1236,7 +1239,9 @@ card-btns > button > a {
     display: none;
 }
 
-
+.nav-element.sticky {
+    position: fixed;
+}
 
 
 .lunchanchor {
@@ -1247,11 +1252,35 @@ card-btns > button > a {
     height: 50px;
 }
 
+.hero-image > img {
+    width: 100%;
+    position: relative;
+    top: -275px;
+    z-index: 38;
+    filter: brightness(0.92)
+}
+
+.hero-text {
+    position: absolute;
+    top: 95px;
+    z-index: 39;
+    width: 100%;
+}
+
+
+
+.hero-text > div h2 {
+    font-weight: normal;
+    font-size: 35px;
+    text-align: center;
+    width: 100%;
+    color: white
+}
 
 .meal {
 
     position: absolute;
-    top: 79px;
+    top: 275px;
     width: 360px;
 
 
@@ -1446,11 +1475,15 @@ card-btns > button > a {
     background-color: #012395;
 }
 
+#indicator.sticky {
+    position: fixed
+}
+
 .indicator-container {
-    position: fixed;
+    position: sticky;
     width: 100%;
     top: 96px;
-    z-index: 50;
+    z-index: 39;
 }
 
 .mini-text {
@@ -1463,7 +1496,7 @@ card-btns > button > a {
     color: #3E3E3E
 }
 
-@media screen and (min-width:1000px) {
+@media screen and (min-width:1030px) {
     body {
         display: none;
     }
@@ -1494,7 +1527,9 @@ card-btns > button > a {
     ;
 }
 
-
+#header.active {
+    box-shadow: 0px 0px 13px -1px rgba(0, 0, 0, 0.2);
+}
 
 
 /*-----------------------------------Dark Mode------------------------------------*/
@@ -1506,9 +1541,325 @@ card-btns > button > a {
 
 body.darkclass {
     background-color: black;
+
+
+}
+
+body.darkclass .header-base {
+    background-color: black;
+    border-bottom: solid;
+    border-bottom-width: 1.3px;
+    border-color: #282828;
+}
+
+body.darkclass .navigation-card {
     color: white;
 }
 
-.logo.darkclass {
-    display: none;
+body.darkclass .menu-button > button {
+    background-color: black;
+    border: solid;
+    border-width: 1.3px;
+    color: white;
+
+}
+
+body.darkclass .menu-button > button > p {
+    color: white;
+}
+
+body.darkclass .material-icons {
+    color: white;
+
+}
+
+body.darkclass .splashscreen {
+    background-color: black;
+}
+
+body.darkclass .hamburger-menu {
+    background-color: black;
+    border: solid;
+    border-width: 1.3px;
+    border-color: white;
+}
+
+body.darkclass .close-menu {
+    background-color: black;
+    color: white;
+    border: solid;
+    border-width: 1.3px;
+    border-color: white;
+}
+
+body.darkclass .options-sect > button > h3 {
+    color: white;
+}
+
+body.darkclass .navigation-card > p {
+    color: white;
+}
+
+body.darkclass .search-base {
+    background-color: black;
+    border: solid;
+    border-color: white;
+    border-width: 1.3px;
+}
+
+body.darkclass .search-base > button > p {
+    color: white;
+}
+
+body.darkclass .card-divider {
+
+    background-color: white;
+
+
+}
+
+body.darkclass .rounded-btn > button {
+    color: white;
+    background-color: black;
+    border: solid;
+    border-width: 1.3px;
+    border-color: white;
+}
+
+body.darkclass summary > div {
+    background-color: black;
+}
+
+body.darkclass summary > div > p {
+    color: white;
+}
+
+body.darkclass .options > h4 {
+    color: white;
+}
+
+body.darkclass .options > p {
+    color: white;
+}
+
+body.darkclass .quick-link > button {
+    background-color: black;
+    border: solid;
+    border-width: 1.3px;
+    border-color: white;
+    color: white;
+}
+
+body.darkclass .quick-link > button > p {
+    color: white;
+}
+
+body.darkclass .kahoot-sect > iframe {
+    filter: invert(100)
+}
+
+body.darkclass .meal-wrapper {
+    filter: invert(150)
+}
+
+body.darkclass .horizontal-nav {
+    background-color: black;
+}
+
+body.darkclass button {
+    color: white;
+}
+
+.iphone-nav {
+    position: fixed;
+    top: -75px;
+    height: 75px;
+    background-color: white;
+    width: 100%;
+    z-index: 50;
+}
+
+
+
+.acrylic {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-image: url(http://api.thumbr.it/whitenoise-361x370.png?background=ffffff00&noise=a0a0a0&density=35&opacity=10);
+    filter: blur(50px);
+    background-color: rgba(#fff, .8)
+}
+
+.IFRAME > iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    border: none;
+}
+
+#toast {
+    visibility: hidden;
+    max-width: 50px;
+    height: 50px;
+    /*margin-left: -125px;*/
+    margin: auto;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    bottom: 90px;
+    font-size: 17px;
+    white-space: nowrap;
+    border: solid;
+    border-color: white;
+    border-width: 1.3px;
+    border-radius: 50px;
+}
+
+#toast #img {
+    width: 50px;
+    height: 50px;
+
+    float: left;
+
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    box-sizing: border-box;
+
+
+    background-color: black;
+    color: #fff;
+    border-radius: 50px;
+}
+
+#toast #desc {
+
+
+    color: #fff;
+
+    padding: 16px;
+
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#toast.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, expand 0.5s 0.5s, stay 3s 1s, shrink 0.5s 2s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, expand 0.5s 0.5s, stay 3s 1s, shrink 0.5s 4s, fadeout 0.5s 4.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes expand {
+    from {
+        min-width: 50px
+    }
+
+    to {
+        min-width: 350px
+    }
+}
+
+@keyframes expand {
+    from {
+        min-width: 50px
+    }
+
+    to {
+        min-width: 350px
+    }
+}
+
+@-webkit-keyframes stay {
+    from {
+        min-width: 350px
+    }
+
+    to {
+        min-width: 350px
+    }
+}
+
+@keyframes stay {
+    from {
+        min-width: 350px
+    }
+
+    to {
+        min-width: 350px
+    }
+}
+
+@-webkit-keyframes shrink {
+    from {
+        min-width: 350px;
+    }
+
+    to {
+        min-width: 50px;
+    }
+}
+
+@keyframes shrink {
+    from {
+        min-width: 350px;
+    }
+
+    to {
+        min-width: 50px;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 60px;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 60px;
+        opacity: 0;
+    }
 }
