@@ -19,6 +19,8 @@
     <link rel="apple-touch-icon" href="Branding/apple-touch-icon.png">
     <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -46,7 +48,13 @@ Google Calendar
 
 <body>
 
-
+    <script><script>
+  $( function() {
+    $( "#sortable" ).sortable();
+    $( "#sortable" ).disableSelection();
+  } );
+  </script>
+    </script>
     <div class="univ-menu">
 
         <button class="menu-cover " onclick="collapse()">
@@ -65,25 +73,32 @@ Google Calendar
 
         <div class="quick-access">
 
+            <a href="#">
+                <div class="quick-link vivify fadeIn">
+                    <button onclick="rightpress()"> <i class="material-icons">fitness_center</i>
+                        <p>Athletics</p>
+                    </button>
 
-            <div class="quick-link vivify fadeIn">
-                <button onclick="rightpress()"> <i class="material-icons">fitness_center</i>
-                    <p>Athletics</p>
-                </button>
+                </div>
+            </a>
 
-            </div>
-            <div class="quick-link vivify fadeIn">
-                <button onclick="leftpress()"><i class="material-icons">live_tv</i>
-                    <p>Live</p>
-                </button>
-            </div>
+            <a href="#">
+                <div class="quick-link vivify fadeIn">
+                    <button onclick="leftpress()"><i class="material-icons">live_tv</i>
+                        <p>Live</p>
+                    </button>
+                </div>
+            </a>
 
-            <div class="quick-link vivify fadeIn">
-                <button onclick="homepress()"> <i class="material-icons">home</i>
-                    <p>Home</p>
-                </button>
+            <a href="#">
+                <div class="quick-link vivify fadeIn">
+                    <button onclick="homepress()"> <i class="material-icons">home</i>
+                        <p>Home</p>
+                    </button>
 
-            </div>
+                </div>
+            </a>
+
 
 
         </div>
@@ -95,7 +110,7 @@ Google Calendar
 
 
 
-
+            <div class="menu-cover"></div>
 
             <div class="options">
 
@@ -119,31 +134,35 @@ Google Calendar
                 </a>
 
 
+                <a href="#">
+                    <div class="options-sect">
+                        <button onclick="meal()">
+                            <i class="menu-icon material-icons">
 
-                <div class="options-sect">
-                    <button onclick="meal()">
-                        <i class="menu-icon material-icons">
+                                restaurant</i>
+                            <h3>Meal Menu</h3>
 
-                            restaurant</i>
-                        <h3>Meal Menu</h3>
-
-                    </button>
-
-                </div>
+                        </button>
 
 
+                    </div>
+                </a>
 
 
-                <div class="options-sect" onclick="kahoot()">
-                    <button>
-                        <i class="menu-icon material-icons">
-                            date_range
-                        </i>
-                        <h3> School Calendar</h3>
 
-                    </button>
+                <a href="#">
+                    <div class="options-sect" onclick="kahoot()">
+                        <button>
+                            <i class="menu-icon material-icons">
+                                date_range
+                            </i>
+                            <h3> School Calendar</h3>
 
-                </div>
+                        </button>
+
+                    </div>
+                </a>
+
 
 
                 <a href="Admiralnation.html">
@@ -204,35 +223,111 @@ Google Calendar
 
 
 
-        <div class="header-base">
+        <div class="header-base" style="box-shadow: 0px 0px 9px -1px rgba(0, 0, 0, 0.1);">
             <div class="logo-wrapper"><img class="" src="Branding/App%20Logo%20Embed.png"></div>
 
 
         </div>
 
-        <div class="spacer" id="spacer"></div>
 
 
 
 
+        <div class="spacer"></div>
+
+        <ul id="sortable">
+            <li>
+                <div class="navigation-card cd1  help" data-aos="fade-up">
 
 
+
+                    <h3 style="margin-left: 23px;">GHS Beach Clean Up
+                    </h3>
+                    <a href="#">
+                        <div>
+                            <h4 style="margin-left: 23px">Student Council
+                            </h4>
+                        </div>
+                    </a>
+
+                    <div class="card-wrapper"><img class="card-img" src="images/dribbble.gif" data-src="Images/MGC%20Sign.jpg"></div>
+
+
+                    <p>Hey students, ninth grade student council is hosting a beach cleanup on May third from 4:30 to 6:00 pm at the end of Courthouse Road by the Gulfport Sign. There will be pizza and drinks provided and we will be giving four hours of community service. Hope to see you there.</p>
+                </div>
+
+
+
+                <div class="card-divider accent"></div>
+            </li>
+
+
+            <li>
+
+                <div class="navigation-card">
+                    <h3 style="margin-left: 23px;">Try New Dark Mode
+                    </h3>
+                    <a href="#">
+                        <div>
+                            <h4 style="margin-left: 23px">GHS App | Experimental
+                            </h4>
+                        </div>
+                    </a>
+
+                    <div class="rounded-btn-wrapper" style="margin-top: 22px;margin-bottom: 77px;">
+                        <div class="rounded-btn"><button onclick="launch_toast()" class="darkmode">Enable</button></div>
+                        <div class="rounded-btn"><button class="normalmode">Disable</button></div>
+
+                    </div>
+
+                    <div class="rounded-btn-wrapper" style="margin-top: 22px;margin-bottom: 77px;">
+                    </div>
+
+                    <script>$(document).ready(function($) {
+	var mode = localStorage.getItem('mode');
+  if (mode) 
+  	$('body').addClass(mode);
+                    $('accent').addClass(mode);
+
+  $(".darkmode").click(function() {
+    $("body").addClass("darkclass");
+      $("accent").addClass("darkclass");
+    localStorage.setItem('mode', 'darkclass');
+  });
+
+  $(".normalmode").click(function() {
+    $("body").removeClass("darkclass");
+      $("accent").removeClass("darkclass");
+    localStorage.setItem('mode', null);
+  });
+});
+</script>
+                </div>
+
+
+
+                <div class="card-divider"></div>
+            </li>
+
+
+
+        </ul>
 
         <div class="navigation-card cd1  help" data-aos="fade-up">
 
 
 
-            <h3 class="darkmode" style="margin-left: 23px;">GHS Beach Clean Up
+            <h3 style="margin-left: 23px;">GHS Beach Clean Up
             </h3>
             <a href="#">
                 <div>
-                    <h4 class="darkmode" style="margin-left: 23px">Student Council
+                    <h4 style="margin-left: 23px">Student Council
                     </h4>
                 </div>
             </a>
 
+            <div class="card-wrapper"><img class="card-img" src="images/dribbble.gif" data-src="Images/MGC%20Sign.jpg"></div>
 
-            <img class="card-img" src="images/dribbble.gif" data-src="Images/MGC%20Sign.jpg">
 
             <p>Hey students, ninth grade student council is hosting a beach cleanup on May third from 4:30 to 6:00 pm at the end of Courthouse Road by the Gulfport Sign. There will be pizza and drinks provided and we will be giving four hours of community service. Hope to see you there.</p>
         </div>
@@ -250,11 +345,11 @@ Google Calendar
 
 
 
-            <h3 class="darkmode" style="margin-left: 23px;">Try New Dark Mode
+            <h3 style="margin-left: 23px;">Try New Dark Mode
             </h3>
             <a href="#">
                 <div>
-                    <h4 class="darkmode" style="margin-left: 23px">GHS App | Experimental
+                    <h4 style="margin-left: 23px">GHS App | Experimental
                     </h4>
                 </div>
             </a>
@@ -301,18 +396,18 @@ Google Calendar
 
         <div class="navigation-card cd1  help" data-aos="fade-up">
 
-            <h3 class="darkmode" style="margin-left: 23px;">Behind the Faces | Podcast
+            <h3 style="margin-left: 23px;">Behind the Faces | Podcast
             </h3>
             <a href="#">
                 <div>
-                    <h4 class="darkmode" style="margin-left: 23px">Student Council
+                    <h4 style="margin-left: 23px">Student Council
                     </h4>
                 </div>
             </a>
 
 
+            <div class="card-wrapper"><img class="card-img" style="object-fit: cover;" src="images/dribbble.gif" data-src="images/behindthefaces.png" /></div>
 
-            <img class="card-img" style="object-fit: cover;" src="images/dribbble.gif" data-src="images/behindthefaces.png" />
 
 
 
@@ -331,11 +426,11 @@ Google Calendar
                 <div class="classic-cardivider" style="margin-top: 15px;"></div>
                 <div class="navigation-card cd1 vivify fadeInLeft">
 
-                    <h3 class="darkmode " style="margin-left: 23px;">Light at the End of the Tunnel
+                    <h3 style="margin-left: 23px;">Light at the End of the Tunnel
                     </h3>
                     <a href="#">
                         <div>
-                            <h4 class="darkmode " style="margin-left: 23px">Episode 1 | 5:37
+                            <h4 style="margin-left: 23px">Episode 1 | 5:37
                             </h4>
                         </div>
                     </a>
@@ -360,11 +455,11 @@ Google Calendar
 
                 <div class="navigation-card cd1 vivify fadeInLeft delay-100">
 
-                    <h3 class="darkmode vivify " style="margin-left: 23px;">Falling to Pieces
+                    <h3 style="margin-left: 23px;">Falling to Pieces
                     </h3>
                     <a href="#">
                         <div>
-                            <h4 class="darkmode " style="margin-left: 23px">Episode 2 | 6:09
+                            <h4 style="margin-left: 23px">Episode 2 | 6:09
                             </h4>
                         </div>
                     </a>
@@ -394,7 +489,7 @@ Google Calendar
                     </h3>
                     <a href="#">
                         <div>
-                            <h4 class="darkmode " style="margin-left: 23px">Episode 3 | 12:38
+                            <h4 style="margin-left: 23px">Episode 3 | 12:38
                             </h4>
                         </div>
                     </a>
@@ -465,11 +560,11 @@ Google Calendar
 
         <div class="navigation-card cd1  help" data-aos="fade-up">
 
-            <h3 class="darkmode" style="margin-left: 23px;">School Store Sale | Entire Store 20% Off
+            <h3 style="margin-left: 23px;">School Store Sale | Entire Store 20% Off
             </h3>
             <a href="#">
                 <div>
-                    <h4 class="darkmode" style="margin-left: 23px">Admiral Nation
+                    <h4 style="margin-left: 23px">Admiral Nation
                     </h4>
                 </div>
             </a>
@@ -497,11 +592,11 @@ Google Calendar
 
         <div class="navigation-card cd1  help" data-aos="fade-up">
 
-            <h3 class="darkmode" style="margin-left: 23px;">Educators Rising Competition
+            <h3 style="margin-left: 23px;">Educators Rising Competition
             </h3>
             <a href="#">
                 <div>
-                    <h4 class="darkmode" style="margin-left: 23px">Educators Rising
+                    <h4 style="margin-left: 23px">Educators Rising
                     </h4>
                 </div>
             </a>
@@ -553,11 +648,11 @@ Google Calendar
 
         <div class="navigation-card cd1 vivify fadeIn delay-100 help" data-aos="fade-up">
 
-            <h3 class="darkmode" style="margin-left: 23px;">Give Feedback | Help Improve The GHS App
+            <h3 style="margin-left: 23px;">Give Feedback | Help Improve The GHS App
             </h3>
             <a href="#">
                 <div>
-                    <h4 class="darkmode" style="margin-left: 23px">GHS App
+                    <h4 style="margin-left: 23px">GHS App
                     </h4>
                 </div>
             </a>
@@ -592,16 +687,16 @@ Google Calendar
 
         <div class="navigation-card cd1 vivify fadeIn delay-100 help" data-aos="fade-up">
 
-            <h3 class="darkmode" style="margin-left: 23px;">Back To Top
+            <h3 style="margin-left: 23px;">Back To Top
             </h3>
             <a href="#">
                 <div>
-                    <h4 class="darkmode" style="margin-left: 23px">GHS App - Help
+                    <h4 style="margin-left: 23px">GHS App - Help
                     </h4>
                 </div>
             </a>
 
-            <div class="rounded-btn-wrapper" style="margin-bottom: 73px;width: 182px;"> <a href="#spacer" class="rounded-btn"><button>Back To Top</button></a>
+            <div class="rounded-btn-wrapper" style="margin-bottom: 73px;width: 182px;"> <a href="#" class="rounded-btn"><button>Back To Top</button></a>
 
             </div>
         </div>
@@ -610,6 +705,11 @@ Google Calendar
 
         <div class="spacer" style="margin-bottom: 25px;"></div>
 
+
+        <div class="privacy-policy"><a href="privacy%20policy.html" target="self">
+
+                <p>Tap To View Privacy Policy</p>
+            </a></div>
 
     </div>
 
@@ -638,16 +738,16 @@ Google Calendar
         <div class="live-sect vivify fadeIn">
 
 
+            <div class="card-wrapper" style="border-radius: 15px"><iframe class="card-img" style="margin-top: 55px" src="https://c.themediacdn.com/embed/media/O7sBCQ/OqvzSehCsA1/mrLrvlwsOOb_5?wmode=opaque" allowfullscreen></iframe></div>
 
-            <iframe style="margin-top: 55px" src="https://c.themediacdn.com/embed/media/O7sBCQ/OqvzSehCsA1/mrLrvlwsOOb_5?wmode=opaque" allowfullscreen></iframe>
 
             <div class="navigation-card cd1 " data-aos="fade-up">
 
-                <h3 class="darkmode" style="margin-left: 23px;">Live Stream
+                <h3 style="margin-left: 23px;">Live Stream
                 </h3>
                 <a href="#">
                     <div>
-                        <h4 class="darkmode" style="margin-left: 23px">Presented By Admiral Nation.com | WGTV
+                        <h4 style="margin-left: 23px">Presented By Admiral Nation.com | WGTV
                         </h4>
                     </div>
                 </a>
@@ -684,50 +784,67 @@ Google Calendar
         </div>
 
 
-        <div class="horizontal-nav">
-            <div class="button-wrapper" style="width: 169px;"><button class="vivify fadeIn" id="btn-schedule" onclick="schedule()">Schedule</button><button class="vivify fadeIn" style="width: 84px;" onclick="site()">Athletic App</button></div>
+        <div class="horizontal-nav nav-element">
+            <a href="#">
+                <div class="button-wrapper" style="width: 169px;"><button class="vivify fadeIn" id="btn-schedule" onclick="schedule()">Schedule</button><button class="vivify fadeIn" style="width: 84px;" onclick="site()">Athletic App</button></div>
+            </a>
+
         </div>
 
+
+        <div class="hero-image" style="margin-top: 53px;">
+            <div class="hero-text">
+                <div>
+                    <h2>Athletics</h2>
+                </div>
+            </div><img style="top: 0px;" src="https://www.sunherald.com/latest-news/t8zgqo/picture219105860/alternates/FREE_1140/0927%20derick%20hall.jpg">
+        </div>
+
+
         <div class="calendar">
-            <div class="indicator-container ">
+            <div class="indicator-container nav-element">
                 <div class="indicator" style="width: 162px;">
                     <div class="line-indicator vivify pullLeft duration-500"></div>
                 </div>
             </div>
 
-            <iframe class=" " src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=600&amp;wkst=2&amp;bgcolor=%23ffffff&amp;src=gulfportschools.org_g8kh79cr8sqbipejvm2c9bc0js%40group.calendar.google.com&amp;color=%23182C57&amp;ctz=America%2FChicago" style="border-width:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+            <div class="spacer"></div>
+
+
+
+            <iframe style="margin-top: -30px;" class=" " src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=600&amp;wkst=2&amp;bgcolor=%23ffffff&amp;src=gulfportschools.org_g8kh79cr8sqbipejvm2c9bc0js%40group.calendar.google.com&amp;color=%23182C57&amp;ctz=America%2FChicago" style="border-width:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
         </div>
 
 
 
         <div class="site">
-            <div class="indicator-container">
+            <div class="indicator-container nav-element">
                 <div class="indicator" style="width: 0px;">
                     <div class="line-indicator vivify pullLeft duration-500"></div>
                 </div>
             </div>
-            <div class="navigation-card cd1  " style="margin-top: -50px;" data-aos="fade-up">
+            <div class="navigation-card cd1  " style="margin-top: 161px;margin-bottom: 150px;" data-aos="fade-up">
 
                 <img class="card-icon" src="Card-Icons/unnamed.webp">
 
-                <h3 class="darkmode" style="margin-left: 23px;">Get The Gulfport Admirals Athletics App
+                <h3 style="margin-left: 23px;">Get The Gulfport Admirals Athletics App
                 </h3>
                 <a href="#">
                     <div>
-                        <h4 class="darkmode" style="margin-left: 23px">By Mascot Media, LLC
+                        <h4 style="margin-left: 23px">By Mascot Media, LLC
                         </h4>
                     </div>
                 </a>
 
+                <div class="card-wrapper"><img class="card-img" style="height:675px;" src="https://is4-ssl.mzstatic.com/image/thumb/Purple118/v4/c7/4b/63/c74b6306-50a3-99c4-9cb9-e0303161c406/mzl.aiapeqvi.png/300x0w.jpg"></div>
 
-                <img class="card-img" style="height:185px;" src="https://www.sunherald.com/latest-news/t8zgqo/picture219105860/alternates/FREE_1140/0927%20derick%20hall.jpg">
 
                 <p>Fans of the Admirals can now stay up to date around the clock from the convenience of their iOS or
                     Android device. Can’t make it to the game? Watch the LIVE broadcast. Need to know the score of last
                     night’s game? Use the app to find breaking news, rosters, upcoming games and much more.</p>
 
-                <div class="rounded-btn-wrapper"> <a href="https://play.google.com/store/apps/details?id=com.sidelineaccess.msgulfport&hl=en_US" class="rounded-btn"><button>Get It On Android</button></a>
-                    <a href="https://itunes.apple.com/us/app/gulfport-admirals-athletics/id1399724155?mt=8" class="rounded-btn"><button>Get It On IOS</button></a></div>
+                <div class="rounded-btn-wrapper"> <a href="https://play.google.com/store/apps/details?id=com.sidelineaccess.msgulfport&hl=en_US" class="rounded-btn"><button>Get It For Android</button></a>
+                    <a href="https://itunes.apple.com/us/app/gulfport-admirals-athletics/id1399724155?mt=8" class="rounded-btn"><button>Get It For IOS</button></a></div>
 
             </div>
 
@@ -755,7 +872,10 @@ Google Calendar
         <div class="spacer" style="height: 239px"></div>
 
         <div class="horizontal-nav nav-element">
-            <div class="button-wrapper"><button id="btn-lunch" class="vivify fadeIn" onclick="lunch()">Lunch</button><button class="vivify fadeIn" onclick="breakfast()">Breakfast</button></div>
+            <a href="#">
+                <div class="button-wrapper"><button id="btn-lunch" class="vivify fadeIn" onclick="lunch()">Lunch</button><button class="vivify fadeIn" onclick="breakfast()">Breakfast</button></div>
+            </a>
+
         </div>
 
 
@@ -823,7 +943,7 @@ Google Calendar
         </div>
 
 
-        <iframe style="margin-top: 15px" src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=district.calendar%40gulfportschools.org&amp;color=%2342104A&amp;src=gulfportschools.org_g8kh79cr8sqbipejvm2c9bc0js%40group.calendar.google.com&amp;color=%23182C57&amp;ctz=America%2FChicago" style="border-width:0" width="360" height="600" frameborder="0" scrolling="no"></iframe>
+        <iframe style="margin-top: 55px;" src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=district.calendar%40gulfportschools.org&amp;color=%2342104A&amp;src=gulfportschools.org_g8kh79cr8sqbipejvm2c9bc0js%40group.calendar.google.com&amp;color=%23182C57&amp;ctz=America%2FChicago" style="border-width:0" width="360" height="600" frameborder="0" scrolling="no"></iframe>
     </div>
 
 
@@ -962,7 +1082,7 @@ Google Calendar
 
 
             var scroll = $(window).scrollTop();
-            if (scroll > 400) {
+            if (scroll > 200) {
                 $(".nav-element").addClass("sticky");
             } else {
                 $(".nav-element").removeClass("sticky");
@@ -978,11 +1098,7 @@ Google Calendar
     </script>
 
 
-    <div id="toast">
-        <div id="img"><i style="color: white" class="material-icons">
-                priority_high</i></div>
-        <div id="desc">Dark Mode Enabled | Experimental</div>
-    </div>
+
 
 
     <script>
