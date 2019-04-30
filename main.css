@@ -804,7 +804,7 @@ card-btns > button > a {
 
 .popup-menu >div{padding-top: 0.6px;margin:auto; width:321.1px; height: 470px; background-color: white;box-shadow:0px 0px 10px rgba(0, 0, 0, 0.2); border-radius: 10px; }
 
-.popup-button {position: fixed; right: 40px;z-index: 101; width: 70px; background-color: white; height: 25px;border-radius: 50px; border-width: 1.3px; border-color: lightgray;top: 18.1px; }
+.popup-button {position: fixed; z-index: 101; width: 70px; background-color: white; height: 25px;border-radius: 50px; border-width: 1.3px; border-color: lightgray;top: 18.1px; float: right; margin-left: 233.1px}
 
 .popup-menu {position:fixed; width: 100%; top: 74.3px; z-index:100;}
 
