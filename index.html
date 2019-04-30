@@ -19,15 +19,8 @@
     <link rel="apple-touch-icon" href="Branding/apple-touch-icon.png">
     <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script>
-        $( function() {
-    $( "#sortable" ).sortable();
-    $( "#sortable" ).disableSelection();
-  } );
-  </script>
-
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122866044-3"></script>
     <script>
@@ -40,7 +33,11 @@
         gtag('config', 'UA-122866044-3');
 
     </script>
-
+<script>
+<script>
+  AOS.init();
+</script>
+</script>
 </head>
 
 <!---
@@ -53,8 +50,6 @@ Google Calendar
 
 <body>
 
-    <script>
-    </script>
     <div class="univ-menu">
 
         <button class="menu-cover " onclick="collapse()">
@@ -218,72 +213,75 @@ Google Calendar
 
     <div class="iphone-nav"></div>
 
+    <div class="header-base">
+        <div class="logo-wrapper"><img class="" src="Branding/App%20Logo%20Embed.png"></div>
 
+
+    </div>
     <div class="homescreen vivify fadeIn">
 
 
 
-        <div class="header-base" style="box-shadow: 0px 0px 9px -1px rgba(0, 0, 0, 0.1);">
-            <div class="logo-wrapper"><img class="" src="Branding/App%20Logo%20Embed.png"></div>
 
 
+
+
+
+
+        <div class="spacer" style="height: 38px;"></div>
+
+
+        <div class="navigation-card cd1  help" data-aos="fade-up">
+
+
+
+            <h3 style="margin-left: 23px;">GHS Beach Clean Up
+            </h3>
+            <a href="#">
+                <div>
+                    <h4 style="margin-left: 23px">Student Council
+                    </h4>
+                </div>
+            </a>
+
+            <div class="card-wrapper"><img class="card-img" src="images/dribbble.gif" data-src="Images/MGC%20Sign.jpg"></div>
+
+
+            <p>Hey students, ninth grade student council is hosting a beach cleanup on May third from 4:30 to 6:00 pm at the end of Courthouse Road by the Gulfport Sign. There will be pizza and drinks provided and we will be giving four hours of community service. Hope to see you there.</p>
         </div>
 
 
 
-
-
-        <div class="spacer"></div>
-
-        <ul id="sortable">
-            <li>
-                <div class="navigation-card cd1  help" data-aos="fade-up">
+        <div class="card-divider"></div>
 
 
 
-                    <h3 style="margin-left: 23px;">GHS Beach Clean Up
-                    </h3>
-                    <a href="#">
-                        <div>
-                            <h4 style="margin-left: 23px">Student Council
-                            </h4>
-                        </div>
-                    </a>
-
-                    <div class="card-wrapper"><img class="card-img" src="images/dribbble.gif" data-src="Images/MGC%20Sign.jpg"></div>
 
 
-                    <p>Hey students, ninth grade student council is hosting a beach cleanup on May third from 4:30 to 6:00 pm at the end of Courthouse Road by the Gulfport Sign. There will be pizza and drinks provided and we will be giving four hours of community service. Hope to see you there.</p>
+
+        <div class="navigation-card cd1  help" data-aos="fade-up">
+
+
+
+            <h3 style="margin-left: 23px;">Try New Dark Mode
+            </h3>
+            <a href="#">
+                <div>
+                    <h4 style="margin-left: 23px">GHS App | Experimental
+                    </h4>
                 </div>
+            </a>
 
+            <div class="rounded-btn-wrapper" style="margin-top: 22px;margin-bottom: 77px;">
+                <div class="rounded-btn"><button onclick="launch_toast()" class="darkmode">Enable</button></div>
+                <div class="rounded-btn"><button class="normalmode">Disable</button></div>
 
+            </div>
 
-                <div class="card-divider accent"></div>
-            </li>
+            <div class="rounded-btn-wrapper" style="margin-top: 22px;margin-bottom: 77px;">
+            </div>
 
-
-            <li>
-
-                <div class="navigation-card">
-                    <h3 style="margin-left: 23px;">Try New Dark Mode
-                    </h3>
-                    <a href="#">
-                        <div>
-                            <h4 style="margin-left: 23px">GHS App | Experimental
-                            </h4>
-                        </div>
-                    </a>
-
-                    <div class="rounded-btn-wrapper" style="margin-top: 22px;margin-bottom: 77px;">
-                        <div class="rounded-btn"><button onclick="launch_toast()" class="darkmode">Enable</button></div>
-                        <div class="rounded-btn"><button class="normalmode">Disable</button></div>
-
-                    </div>
-
-                    <div class="rounded-btn-wrapper" style="margin-top: 22px;margin-bottom: 77px;">
-                    </div>
-
-                    <script>$(document).ready(function($) {
+            <script>$(document).ready(function($) {
 	var mode = localStorage.getItem('mode');
   if (mode) 
   	$('body').addClass(mode);
@@ -302,213 +300,261 @@ Google Calendar
   });
 });
 </script>
-                </div>
+        </div>
 
 
 
-                <div class="card-divider"></div>
-            </li>
+        <div class="card-divider"></div>
 
-            <li>
-                <div class="navigation-card cd1  help" data-aos="fade-up">
 
-                    <h3 style="margin-left: 23px;">Behind the Faces | Podcast
-                    </h3>
-                    <a href="#">
+
+
+
+<div class="popup-menu"><div><div  class="navigation-card"><h3 style = "margin-left:23px; ">Behind the Faces | Podcast</h3><a href="#">
                         <div>
                             <h4 style="margin-left: 23px">Student Council
                             </h4>
                         </div>
-                    </a>
+                    </a></div><div class="content-container">    <div class="classic-cardivider"></div>
 
+                <div class="navigation-card cd1 vivify fadeInLeft delay-100">
 
-                    <div class="card-wrapper"><img class="card-img" style="object-fit: cover;" src="images/dribbble.gif" data-src="images/behindthefaces.png" /></div>
-
-
-
-
-
-
-                    <p>Listen to the storys told by students just like you. Episode 3 now available.</p>
-
-
-
-                    <details>
-                        <summary>
-                            <div class="p-wrapper">
-                                <p>Listen Now</p>
-                            </div>
-                        </summary>
-                        <div class="classic-cardivider" style="margin-top: 15px;"></div>
-                        <div class="navigation-card cd1 vivify fadeInLeft">
-
-                            <h3 style="margin-left: 23px;">Light at the End of the Tunnel
-                            </h3>
-                            <a href="#">
-                                <div>
-                                    <h4 style="margin-left: 23px">Episode 1 | 5:37
-                                    </h4>
-                                </div>
-                            </a>
-
-
-
-                            <div class="audio-wrapper"><audio controls>
-                                    <source src="Podcast/Episode 1 - Light at the End of the Tunnel  .mp3">
-
-                                </audio></div>
-
-
-
-                            <p class="vivify fadeIn">Facing a life - threatening disease can be difficult but there are lessons to be found in the darkness. </p>
-
-
-
-
-                        </div>
-
-                        <div class="classic-cardivider"></div>
-
-                        <div class="navigation-card cd1 vivify fadeInLeft delay-100">
-
-                            <h3 style="margin-left: 23px;">Falling to Pieces
-                            </h3>
-                            <a href="#">
-                                <div>
-                                    <h4 style="margin-left: 23px">Episode 2 | 6:09
-                                    </h4>
-                                </div>
-                            </a>
-
-
-
-                            <div class="audio-wrapper"><audio controls class="">
-                                    <source src="Podcast/Episode 2 - Falling to Pieces.mp3" />
-
-                                </audio></div>
-
-
-
-                            <p class="vivify fadeIn">So much of what we see in the mirror affects how we feel about ourselves. Family and friends help us get through.</p>
-
-
-
-
-                        </div>
-
-
-                        <div class="classic-cardivider"></div>
-
-                        <div class="navigation-card cd1 vivify fadeInLeft delay-200">
-
-                            <h3 class="darkmode vivify " style="margin-left: 23px;">Things Can Always Be Worse
-                            </h3>
-                            <a href="#">
-                                <div>
-                                    <h4 style="margin-left: 23px">Episode 3 | 12:38
-                                    </h4>
-                                </div>
-                            </a>
-
-
-
-                            <div class="audio-wrapper"><audio controls class="">
-                                    <source src="Podcast/Episode 3 - Things Can Alsways Be Worse.WAV">
-
-
-                                </audio></div>
-
-
-                            <p class="vivify fadeIn">Even when things don't turn out the way you think they should, it is important to realize what you do have. </p>
-
-
-
-
-
-                        </div>
-
-                        <div class="classic-cardivider"></div>
-
-                        <div class="navigation-card cd1 vivify fadeInLeft delay-200">
-
-                            <h3 class="darkmode vivify " style="margin-left: 23px;">Things Can Always Be Worse
-                            </h3>
-                            <a href="#">
-                                <div>
-                                    <h4 class="darkmode " style="margin-left: 23px">Episode 3 | 12:38
-                                    </h4>
-                                </div>
-                            </a>
-
-
-
-                            <div class="audio-wrapper"><audio controls class="">
-                                    <source src="Podcast/Episode 3 - Things Can Alsways Be Worse.WAV">
-
-
-                                </audio></div>
-
-
-                            <p class="vivify fadeIn">Even when things don't turn out the way you think they should, it is important to realize what you do have. </p>
-
-
-
-
-
-                        </div>
-
-
-                    </details>
-                </div>
-
-
-
-
-
-
-
-
-
-
-                <div class="card-divider"></div>
-            </li>
-
-
-
-
-
-            <li>
-                <div class="navigation-card cd1  help" data-aos="fade-up">
-
-                    <h3 style="margin-left: 23px;">School Store Sale | Entire Store 20% Off
+                    <h3 style="margin-left: 23px;">Falling to Pieces
                     </h3>
                     <a href="#">
                         <div>
-                            <h4 style="margin-left: 23px">Admiral Nation
+                            <h4 style="margin-left: 23px">Episode 2 | 6:09
                             </h4>
                         </div>
                     </a>
 
 
 
-                    <div class="swipe-menu" style="margin-top: 10px;"><img src="images/dribbble.gif" data-src="ShopItems/Quarter Zip Thumbnail.jpg" /><img src="images/dribbble.gif" data-src="ShopItems/T-Shirt1 Thumbnail.jpg"><img src="images/dribbble.gif" data-src="ShopItems/Sweatshirt Thumbnail.jpg" /><img src="images/dribbble.gif" data-src="ShopItems/Beanie Thumbnail.jpg" />
+                    <div class="audio-wrapper"><audio controls class="">
+                            <source src="Podcast/Episode 2 - Falling to Pieces.mp3" />
 
-                    </div>
+                        </audio></div>
 
-                    <div class="rounded-btn-wrapper" style="width: 182px;margin-bottom: 81px;"> <a href="https://admiralnation.github.io/SHOP/" class="rounded-btn" target="_blank"><button>Visit Site</button></a>
 
-                    </div>
+
+                    <p class="vivify fadeIn">So much of what we see in the mirror affects how we feel about ourselves. Family and friends help us get through.</p>
+
+
+
+
                 </div>
 
 
+                <div class="classic-cardivider"></div>
+
+                <div class="navigation-card cd1 vivify fadeInLeft delay-200">
+
+                    <h3 class="darkmode vivify " style="margin-left: 23px;">Things Can Always Be Worse
+                    </h3>
+                    <a href="#">
+                        <div>
+                            <h4 style="margin-left: 23px">Episode 3 | 12:38
+                            </h4>
+                        </div>
+                    </a>
+
+
+
+                    <div class="audio-wrapper"><audio controls class="">
+                            <source src="Podcast/Episode 3 - Things Can Alsways Be Worse.WAV">
+
+
+                        </audio></div>
+
+
+                    <p class="vivify fadeIn">Even when things don't turn out the way you think they should, it is important to realize what you do have. </p>
 
 
 
 
 
-                <div class="card-divider"></div>
-            </li>
-        </ul>
+                </div>
+
+                <div class="classic-cardivider"></div>
+
+                <div class="navigation-card cd1 vivify fadeInLeft delay-200">
+
+                    <h3 class="darkmode vivify " style="margin-left: 23px;">Things Can Always Be Worse
+                    </h3>
+                    <a href="#">
+                        <div>
+                            <h4 class="darkmode " style="margin-left: 23px">Episode 3 | 12:38
+                            </h4>
+                        </div>
+                    </a>
+
+
+
+                    <div class="audio-wrapper"><audio controls class="">
+                            <source src="Podcast/Episode 3 - Things Can Alsways Be Worse.WAV">
+
+
+                        </audio></div>
+
+
+                    <p class="vivify fadeIn">Even when things don't turn out the way you think they should, it is important to realize what you do have. </p>
+
+
+
+
+
+                </div></div></div></div>
+
+        <div class="navigation-card cd1  help" data-aos="fade-up">
+
+            <h3 style="margin-left: 23px;">Behind the Faces | Podcast
+            </h3>
+            <a href="#">
+                <div>
+                    <h4 style="margin-left: 23px">Student Council
+                    </h4>
+                </div>
+            </a>
+
+
+            <div class="card-wrapper"><img class="card-img" style="object-fit: cover;" src="images/dribbble.gif" data-src="images/behindthefaces.png" /></div>
+
+
+
+
+
+
+            <p>Listen to the storys told by students just like you. Episode 3 now available.</p>
+
+
+
+            <details>
+                <summary>
+                    <div class="p-wrapper">
+                        <p>Listen Now</p>
+                    </div>
+                </summary>
+                <div class="classic-cardivider" style="margin-top: 15px;"></div>
+                <div class="navigation-card cd1 vivify fadeInLeft">
+
+                    <h3 style="margin-left: 23px;">Light at the End of the Tunnel
+                    </h3>
+                    <a href="#">
+                        <div>
+                            <h4 style="margin-left: 23px">Episode 1 | 5:37
+                            </h4>
+                        </div>
+                    </a>
+
+
+
+                    <div class="audio-wrapper"><audio controls>
+                            <source src="Podcast/Episode 1 - Light at the End of the Tunnel  .mp3">
+
+                        </audio></div>
+
+
+
+                    <p class="vivify fadeIn">Facing a life - threatening disease can be difficult but there are lessons to be found in the darkness. </p>
+
+
+
+
+                </div>
+
+                <div class="classic-cardivider"></div>
+
+                <div class="navigation-card cd1 vivify fadeInLeft delay-100">
+
+                    <h3 style="margin-left: 23px;">Falling to Pieces
+                    </h3>
+                    <a href="#">
+                        <div>
+                            <h4 style="margin-left: 23px">Episode 2 | 6:09
+                            </h4>
+                        </div>
+                    </a>
+
+
+
+                    <div class="audio-wrapper"><audio controls class="">
+                            <source src="Podcast/Episode 2 - Falling to Pieces.mp3" />
+
+                        </audio></div>
+
+
+
+                    <p class="vivify fadeIn">So much of what we see in the mirror affects how we feel about ourselves. Family and friends help us get through.</p>
+
+
+
+
+                </div>
+
+
+                <div class="classic-cardivider"></div>
+
+                <div class="navigation-card cd1 vivify fadeInLeft delay-200">
+
+                    <h3 class="darkmode vivify " style="margin-left: 23px;">Things Can Always Be Worse
+                    </h3>
+                    <a href="#">
+                        <div>
+                            <h4 style="margin-left: 23px">Episode 3 | 12:38
+                            </h4>
+                        </div>
+                    </a>
+
+
+
+                    <div class="audio-wrapper"><audio controls class="">
+                            <source src="Podcast/Episode 3 - Things Can Alsways Be Worse.WAV">
+
+
+                        </audio></div>
+
+
+                    <p class="vivify fadeIn">Even when things don't turn out the way you think they should, it is important to realize what you do have. </p>
+
+
+
+
+
+                </div>
+
+                <div class="classic-cardivider"></div>
+
+                <div class="navigation-card cd1 vivify fadeInLeft delay-200">
+
+                    <h3 class="darkmode vivify " style="margin-left: 23px;">Things Can Always Be Worse
+                    </h3>
+                    <a href="#">
+                        <div>
+                            <h4 class="darkmode " style="margin-left: 23px">Episode 3 | 12:38
+                            </h4>
+                        </div>
+                    </a>
+
+
+
+                    <div class="audio-wrapper"><audio controls class="">
+                            <source src="Podcast/Episode 3 - Things Can Alsways Be Worse.WAV">
+
+
+                        </audio></div>
+
+
+                    <p class="vivify fadeIn">Even when things don't turn out the way you think they should, it is important to realize what you do have. </p>
+
+
+
+
+
+                </div>
+
+
+            </details>
+        </div>
 
 
 
@@ -516,6 +562,42 @@ Google Calendar
 
 
 
+
+
+
+        <div class="card-divider"></div>
+
+
+
+        <div class="navigation-card cd1  help" data-aos="fade-up">
+
+            <h3 style="margin-left: 23px;">School Store Sale | Entire Store 20% Off
+            </h3>
+            <a href="#">
+                <div>
+                    <h4 style="margin-left: 23px">Admiral Nation
+                    </h4>
+                </div>
+            </a>
+
+
+
+            <div class="swipe-menu" style="margin-top: 10px;"><img src="images/dribbble.gif" data-src="ShopItems/Quarter Zip Thumbnail.jpg" /><img src="images/dribbble.gif" data-src="ShopItems/T-Shirt1 Thumbnail.jpg"><img src="images/dribbble.gif" data-src="ShopItems/Sweatshirt Thumbnail.jpg" /><img src="images/dribbble.gif" data-src="ShopItems/Beanie Thumbnail.jpg" />
+
+            </div>
+
+            <div class="rounded-btn-wrapper" style="width: 182px;margin-bottom: 81px;"> <a href="https://admiralnation.github.io/SHOP/" class="rounded-btn" target="_blank"><button>Visit Site</button></a>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <div class="card-divider"></div>
 
 
 
@@ -654,11 +736,6 @@ Google Calendar
     <div class="media-sect">
 
 
-        <div class="header-base">
-            <div class="logo-wrapper"><img src="Branding/App%20Logo%20Embed.png"></div>
-
-
-        </div>
 
 
 
@@ -692,6 +769,8 @@ Google Calendar
                 <div class="swipe-menu" style="display: none;"><a href="#"><img src="images/Anouncements"></a><a href="#"><img src="images/Anouncements"></a><a href="#"><img src="images/Anouncements"></a><a href="#"><img src="images/Anouncements"></a></div>
             </div>
 
+			<div class = "navigation-card"></div>
+			
         </div>
 
     </div>
@@ -706,11 +785,6 @@ Google Calendar
 
     <div class="athletic-sect">
 
-        <div class="header-base">
-            <div class="logo-wrapper"><img src="Branding/App%20Logo%20Embed.png"></div>
-
-
-        </div>
 
 
         <div class="horizontal-nav nav-element">
@@ -792,11 +866,7 @@ Google Calendar
 
     <div class="meal-menu">
 
-        <div class="header-base" id="header">
-            <div class="logo-wrapper"><img src="Branding/App%20Logo%20Embed.png"></div>
 
-
-        </div>
 
         <div class="spacer" style="height: 239px"></div>
 
@@ -865,14 +935,10 @@ Google Calendar
 
 
     <div class="kahoot-sect">
-        <div class="header-base">
-            <div class="logo-wrapper"><img src="Branding/App%20Logo%20Embed.png"></div>
 
 
-        </div>
 
-
-        <iframe style="margin-top: 55px;" src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=district.calendar%40gulfportschools.org&amp;color=%2342104A&amp;src=gulfportschools.org_g8kh79cr8sqbipejvm2c9bc0js%40group.calendar.google.com&amp;color=%23182C57&amp;ctz=America%2FChicago" style="border-width:0" width="360" height="600" frameborder="0" scrolling="no"></iframe>
+        <iframe style="margin-top: 55px;" src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=district.calendar%40gulfportschools.org&amp;color=%2342104A&amp;src=gulfportschools.org_g8kh79cr8sqbipejvm2c9bc0js%40group.calendar.google.com&amp;color=%23182C57&amp;ctz=America%2FChicago" style="border-width:0" width="360" frameborder="0" scrolling="no"></iframe>
     </div>
 
 
