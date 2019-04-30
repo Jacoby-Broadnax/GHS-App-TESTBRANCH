@@ -802,11 +802,11 @@ card-btns > button > a {
 }
 
 
-.popup-menu >div{margin:auto; width:346px; height: 400px; background-color: white;box-shadow:0px 0px 10px rgba(0, 0, 0, 0.2); border-radius: 10px; }
+.popup-menu >div{padding-top: 0.6px;margin:auto; width:346px; height: 630px; background-color: white;box-shadow:0px 0px 10px rgba(0, 0, 0, 0.2); border-radius: 10px; }
 
-.popup-menu {position:fixed; width: 100%; top: 10%; z-index:100;}
+.popup-menu {position:fixed; width: 100%; top: 74.3px; z-index:100;}
 
-.content-container {height: 400px; overflow:scroll; white-space: none;}
+.content-container {height: 630px; overflow:scroll; white-space: none;width: 100%;}
 
 .p-plus > span {
     display: none;
