@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="149" height="123" viewBox="0 0 149 123">
+  <defs>
+    <clipPath id="clip-Prizes">
+      <rect width="149" height="123"/>
+    </clipPath>
+  </defs>
+  <g id="Prizes" clip-path="url(#clip-Prizes)">
+    <rect width="149" height="123" fill="#fff"/>
+    <text id="Prizes_" data-name="Prizes !" transform="translate(6 50)" font-size="21" font-family="Roboto-Regular, Roboto"><tspan x="34.875" y="20">Prizes !</tspan></text>
+  </g>
+</svg>
