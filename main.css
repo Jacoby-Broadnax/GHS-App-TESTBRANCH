@@ -54,6 +54,7 @@ body {
 form {
     margin: auto;
     width: 331px;
+    margin-top: 34px;
 }
 
 form > input {
@@ -69,6 +70,10 @@ form > input {
 }
 
 input::-webkit-input-placeholder {
+    padding-left: 19px;
+}
+
+input[type=text] {
     padding-left: 19px;
 }
 
@@ -1339,6 +1344,8 @@ card-btns > button > a {
 .rounded-btn > button:hover {
     background-color: lightgray;
 }
+
+
 
 .fab {
     position: fixed;
