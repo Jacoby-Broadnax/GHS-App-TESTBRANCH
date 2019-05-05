@@ -90,9 +90,13 @@ form > input {
 
     margin-top: 17px;
     margin-bottom: 16px;
-    background-color: #e8e8e8;
+
     padding: 14px;
     padding-left: 21px;
+    border-bottom: solid;
+    border-top: solid;
+    border-width: 1.3px;
+    border-color: lightgray;
 }
 
 .joinnow {}
