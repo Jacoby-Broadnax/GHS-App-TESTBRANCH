@@ -51,6 +51,12 @@ Google Calendar
 
 <body>
 
+    <div class="splashscreen vivify delay-1500 fadeOut" id="loader">
+        <div class="splash-logo vivify popOut delay-1000" style="margin-top: 350px;"><img class="" style="left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);width: 40%;" src="Branding/Logo filled.svg"></div>
+    </div>
+
     <div class="univ-menu">
 
         <button class="menu-cover " onclick="collapse()">
@@ -260,7 +266,7 @@ Google Calendar
         <div id="game" class="popup-menu vivify pullUp" style="background-image: url(background-image: url(https://static.vecteezy.com/system/resources/previews/000/092/926/non_2x/question-mark-background-in-vector.jpg)">
             <div>
                 <div class="content-container">
-                    <div class="navigation-card">
+                    <div class="navigation-card" class="popup-nav">
 
 
 
@@ -486,7 +492,7 @@ Google Calendar
         </div>
 
 
-        <div class="classic-cardivider"></div>
+        <div class="card-divider"></div>
 
 
         <div class="navigation-card cd1  help" data-aos="fade-up">
@@ -550,7 +556,47 @@ Google Calendar
         </div>
 
 
+
+
+        <div id="teamfusion" class="popup-menu vivify pullUp" style="background-image: url(background-image: url(https://static.vecteezy.com/system/resources/previews/000/092/926/non_2x/question-mark-background-in-vector.jpg)">
+            <div>
+                <div class="content-container">
+                    <div class="navigation-card">
+
+
+
+                        <h3 style=" position: fixed;background-color:white;height: 49.3px;width: 100%;padding-left: 23px;padding-top: 10px;margin-top: 0px;z-index: 100;">Interested In Robotics?</h3><a href="#">
+                            <div>
+                                <h4 style="margin-left: 23px;position: fixed;margin-top: 31.1px;z-index: 101;">Team Fusion
+                                </h4>
+                            </div>
+                        </a>
+
+                        <a href="#"><button class="popup-button">Close</button></a>
+
+
+                        <div class="spacer" style="height: 60px;"></div>
+
+
+                    </div>
+
+                    <div class="iframe-menu" style="margin-top: -6px;">
+                        <iframe src="https://www.fusion364.com/index"></iframe>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
         <div class="card-divider"></div>
+
+
+
+
+
 
 
         <div class="navigation-card cd1  help" data-aos="fade-up">
@@ -569,7 +615,7 @@ Google Calendar
             </div>
 
 
-            <div class="rounded-btn-wrapper" style="width: 182px;margin-bottom: 81px;"> <a href="https://www.fusion364.com/index" class="rounded-btn" target="_blank"><button>Learn More</button></a>
+            <div class="rounded-btn-wrapper" style="width: 182px;margin-bottom: 81px;"> <a href="#teamfusion" class="rounded-btn" target="_blank"><button>Learn More</button></a>
 
             </div>
         </div>
@@ -767,7 +813,7 @@ Google Calendar
                     </div>
                 </a>
 
-		    <a href="https://ghsapptestbranch.netlify.com/"><button>L</button></a>
+
 
                 <div class="rounded-btn-wrapper" style="margin-top: 22px;margin-bottom: 77px;"> <a href="https://admiralnation.github.io/SHOP/" class="rounded-btn"><button>Shop Admiral
                             Nation</button></a>
@@ -899,6 +945,12 @@ Google Calendar
                 <div class="hero-text">
                     <div>
                         <h2>Meal Menu</h2>
+                        <p id="datetime"></p>
+
+                        <script>
+                            var dt = new Date();
+document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
+</script>
                     </div>
                 </div><img src="Images/VegNews.VegSchoolLunch.jpg">
             </div>
@@ -919,6 +971,12 @@ Google Calendar
                 <div class="hero-text">
                     <div>
                         <h2>Meal Menu</h2>
+                        <p id="datetime2"></p>
+
+                        <script>
+                            var dt = new Date();
+document.getElementById("datetime2").innerHTML = dt.toLocaleDateString();
+</script>
                     </div>
                 </div><img src="Images/VegNews.VegSchoolLunch.jpg">
             </div>
@@ -1182,7 +1240,7 @@ Google Calendar
     </script>
 
     <script>
-        window.setTimeout(loaded, 1600);
+        window.setTimeout(loaded, 1500);
         var element = document.getElementById('loader');
 
         function loaded() {
