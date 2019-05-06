@@ -81,7 +81,13 @@ form > input {
 
 }
 
+#teamfusion {
+    display: none;
+}
 
+#teamfusion:target {
+    display: block;
+}
 
 .joinnow > h3 {
     font-size: 14px;
@@ -97,6 +103,13 @@ form > input {
 
     border-width: 1.3px;
     border-color: lightgray;
+}
+
+.iframe-menu > iframe {
+    width: 100%;
+    height: 87%;
+    position: fixed;
+    border: none;
 }
 
 .joinnow {}
@@ -115,6 +128,14 @@ form > input:focus {
     border-width: 2px;
     border-color: #012395;
 }
+
+input[type=text] {
+    /* Remove First */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
 
 a {
     text-decoration: none;
@@ -948,7 +969,7 @@ card-btns > button > a {
 
 .card-wrapper > h3 {
     position: absolute;
-    top: 22px;
+    top: 24px;
     color: white;
     font-weight: normal;
     font-size: 28px;
@@ -958,7 +979,7 @@ card-btns > button > a {
     background-color: rgba(0, 0, 0, 0.3);
     vertical-align: center;
     padding-top: 86px;
-    border-radius: 10px;
+    border-radius: 12px;
     transition: 0.5s ease;
 }
 
