@@ -35,9 +35,10 @@
 
     </script>
     <script>
-        <script>
-  AOS.init();
-</script>
+        < script >
+            AOS.init();
+
+    </script>
 
 </head>
 
@@ -285,28 +286,29 @@ Google Calendar
 
                     </div>
 
-                
 
-					
-					<div id="submit">
+
+
+                    <div id="submit">
 
                         <div class="spacer" style="height: 47px;"></div>
-						
-						<iframe src="https://ghsapptestbranch.netlify.com/submit.html"></iframe>
-						</div>
+
+                        <iframe src="https://ghsapptestbranch.netlify.com/submit.html"></iframe>
+                    </div>
 
 
                     <div class="joinnow">
 
 
-                        
-<div class="card-wrapper" style="width: 100%; ">
-                <h3 style="width: 100%; border-radius: 0px; margin-top: 37px; " data-aos="fade-out" data-aos-delay="300">Question Everything <div class="rounded-btn-wrapper" style="margin-top: 10px;margin-bottom: 77px;">
-                <div class="rounded-btn"><button onclick="launch_toast()" class="darkmode">Submit Clue</button></div>
-                <div class="rounded-btn"><button class="normalmode">Rules</button></div>
 
-            </div></h3><img style="width: 100%; "				class="card-img" src="images/dribbble.gif" data-src="https://static.vecteezy.com/system/resources/previews/000/092/926/non_2x/question-mark-background-in-vector.jpg">
-            </div>
+                        <div class="card-wrapper" style="width: 100%; ">
+                            <h3 style="width: 100%; border-radius: 0px; margin-top: 37px; " data-aos="fade-out" data-aos-delay="300">Question Everything <div class="rounded-btn-wrapper" style="margin-top: 10px;margin-bottom: 77px;">
+                                    <div class="rounded-btn"><button onclick="launch_toast()" class="darkmode">Submit Clue</button></div>
+                                    <div class="rounded-btn"><button class="normalmode">Rules</button></div>
+
+                                </div>
+                            </h3><img style="width: 100%; " class="card-img" src="images/dribbble.gif" data-src="https://static.vecteezy.com/system/resources/previews/000/092/926/non_2x/question-mark-background-in-vector.jpg">
+                        </div>
 
                         <h3>Note: Maximum of 3 members per team. All team members school E-mails must be listed. </h3>
 
@@ -373,25 +375,27 @@ Google Calendar
             <div class="rounded-btn-wrapper" style="margin-top: 22px;margin-bottom: 77px;">
             </div>
 
-            <script>$(document).ready(function($) {
-	var mode = localStorage.getItem('mode');
-  if (mode) 
-  	$('body').addClass(mode);
+            <script>
+                $(document).ready(function($) {
+                    var mode = localStorage.getItem('mode');
+                    if (mode)
+                        $('body').addClass(mode);
                     $('accent').addClass(mode);
 
-  $(".darkmode").click(function() {
-    $("body").addClass("darkclass");
-      $("accent").addClass("darkclass");
-    localStorage.setItem('mode', 'darkclass');
-  });
+                    $(".darkmode").click(function() {
+                        $("body").addClass("darkclass");
+                        $("accent").addClass("darkclass");
+                        localStorage.setItem('mode', 'darkclass');
+                    });
 
-  $(".normalmode").click(function() {
-    $("body").removeClass("darkclass");
-      $("accent").removeClass("darkclass");
-    localStorage.setItem('mode', null);
-  });
-});
-</script>
+                    $(".normalmode").click(function() {
+                        $("body").removeClass("darkclass");
+                        $("accent").removeClass("darkclass");
+                        localStorage.setItem('mode', null);
+                    });
+                });
+
+            </script>
         </div>
 
 
@@ -486,14 +490,15 @@ Google Calendar
                 </div>
             </div>
         </div>
-        
-        
+
+
         <div class="card-divider"></div>
 
 
         <div class="navigation-card cd1  help" data-aos="fade-up">
 
-            <h3 style="margin-left: 23px;"><marquee style="width: 110px;">Translate Traducir 翻译 Traduire</marquee>
+            <h3 style="margin-left: 23px;">
+                <marquee style="width: 110px;">Translate Traducir 翻译 Traduire</marquee>
             </h3>
             <a href="#">
                 <div>
@@ -503,32 +508,34 @@ Google Calendar
             </a>
 
 
-           
 
 
 
 
 
 
-          
-
-<div id="google_translate_element" style="position: absolute; top: -3px;margin-left: 190px;z-index: 500"></div>
-
-<script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-}
-</script>
-
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-         
 
 
+            <div id="google_translate_element" style="position: absolute; top: -3px;margin-left: 190px;z-index: 500"></div>
+
+            <script type="text/javascript">
+                function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({
+                        pageLanguage: 'en'
+                    }, 'google_translate_element');
+                }
+
+            </script>
+
+            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 
-            </div>
+
+
+
+
         </div>
+
 
 
         <div class="card-divider"></div>
@@ -597,7 +604,7 @@ function googleTranslateElementInit() {
 
 
 
-        <div id="teamfusion" class="popup-menu vivify pullUp" >
+        <div id="teamfusion" class="popup-menu vivify pullUp">
             <div>
                 <div class="content-container">
                     <div class="navigation-card">
@@ -693,6 +700,50 @@ function googleTranslateElementInit() {
 
         <div class="card-divider"></div>
 
+<div class="art-container"><img id="view" class="target-element" src="Images/IMG_20190509_104622.jpg"></div>
+
+        <div class="navigation-card cd1  help" id="spanclose" data-aos="fade-up">
+
+            <h3 style="margin-left: 23px;">GHS Art
+            </h3>
+            <a href="#">
+                <div>
+                    <h4 style="margin-left: 23px">Art
+                    </h4>
+                </div>
+            </a>
+
+            <a href="#close-btn">
+                <div class="swipe-menu" style="margin-top: 10px;"><a href="#view"><img style="border: none;" data-src="Images/art1.png" src="Images/Dribbble.gif" /></a>
+                    <a href="#view2"><img id="view2" style="border: none;" src="images/dribbble.gif" data-src="images/art2.png"></a><img style="border: none;" src="images/dribbble.gif" data-src="images/IMG-1474-min.JPG" /><img style="border: none;" src="images/dribbble.gif" data-src="images/IMG-1475-min.JPG" />
+
+                </div>
+            </a>
+            <div id="close-btn"><a href="#spanclose"><button style="z-index: 501; top: 75px;" class="popup-button">Close</button></a></div>
+
+
+
+            <p style="margin-top: 6px;">
+
+
+
+
+
+                These young ladies have the potential to travel to Dallas, Texas to compete for Nationals in June. I’m
+                very proud of our future teachers!
+
+                Please congratulate them! There was a lot of competition in each category. </p>
+
+
+        </div>
+
+<div class="art-container"><img id="view" src="Images/IMG_20190509_104622.jpg"></div>
+
+
+
+
+        <div class="card-divider"></div>
+
 
 
         <div class="navigation-card cd1  help" data-aos="fade-up">
@@ -713,7 +764,7 @@ function googleTranslateElementInit() {
                     Jackson </marquee>
             </div>
 
-            <div class="swipe-menu" style="margin-top: 10px;"><img style="border: none;" src="images/dribbble.gif" data-src="images/IMG-1473-min.JPG" /><img style="border: none;" src="images/dribbble.gif" data-src="images/IMG-1477-min.JPG"><img style="border: none;" src="images/dribbble.gif" data-src="images/IMG-1474-min.JPG" /><img style="border: none;" src="images/dribbble.gif" data-src="images/IMG-1475-min.JPG" />
+            <div class="swipe-menu" style="margin-top: 10px;"><img style="border: none;" src="images/dribbble.gif" data-src="images/IMG-1473-min.JPG" /><img style="border: none;" src="images/art2.png" data-src="images/IMG-1477-min.JPG"><img style="border: none;" src="images/dribbble.gif" data-src="images/IMG-1474-min.JPG" /><img style="border: none;" src="images/dribbble.gif" data-src="images/IMG-1475-min.JPG" />
 
             </div>
 
