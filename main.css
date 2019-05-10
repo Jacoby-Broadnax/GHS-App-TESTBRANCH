@@ -328,7 +328,7 @@ summary:focus {
     transition: 0.3s ease;
 }
 
-#view {position: fixed;top: 0px;left: 0px;;;display: none;transition: 0.5s ease;width: 0px;z-index: 500;object-fit: cover;}
+#view {position: fixed;top: 0px;left: 0px; transition: 0.5s ease;width: 0px;z-index: 500;object-fit: cover;height: 0px;}
 
 #view:target {
 
@@ -336,7 +336,7 @@ summary:focus {
     border-radius: 0px;
    height: 100%;
    
-    display: block;
+
 
 }
 
