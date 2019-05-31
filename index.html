@@ -17,17 +17,15 @@
     <meta name="theme-color" content="#ffffff">
     <meta name="apple-mobile-web-app-title" content="GHS App">
     <link rel="apple-touch-icon" href="Branding/apple-touch-icon.png">
-    <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
 
 
-
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
     <script>
         $(function() {
             $("#tabs").tabs();
@@ -143,30 +141,26 @@ Google Calendar
 
 
 
-        <div class="row">
-            <div class="col s12">
-                <ul class="tabs">
-                    <li class="tab col s3"><a href="#test1">Home</a></li>
-                    <li class="tab col s3"><a href="#test2">Athletics</a></li>
+        <ul id="tabs-swipe-demo" class="tabs">
+            <li class="tab col s3"><a href="#swipe-1" class="active">Home</a></li>
+            <li class="tab col s3"><a href="#swipe-2">News</a></li>
 
-                </ul>
-            </div>
-            <div id="test1" class="col s12" style="width: 100%; ;">
-
-                <div class="navigation-card">
-                    <div class="options">
+        </ul>
+        <div id="swipe-1" class="col s12 blue" style="width: 100%;height: 100%;">
+            <div class="navigation-card">
+                <div class="options">
 
 
 
-                        <h4 class="vivify">GHS App</h4>
-                        <p class="vivify">Gulfport High School</p>
+                    <h4 class="vivify">GHS App</h4>
+                    <p class="vivify">Gulfport High School</p>
 
-                        <div class="weather-widget">
-                            <script type='text/javascript' src='https://darksky.net/widget/default-small/30.3674,-89.0928/us12/en.js?width=100%&height=70&title=Full Forecast&textColor=000000&bgColor=transparent&transparency=true&skyColor=undefined&fontFamily=Default&customFont=&units=us'></script>
-                        </div>
+                    <div class="weather-widget">
+                        <script type='text/javascript' src='https://darksky.net/widget/default-small/30.3674,-89.0928/us12/en.js?width=100%&height=70&title=Full Forecast&textColor=000000&bgColor=transparent&transparency=true&skyColor=undefined&fontFamily=Default&customFont=&units=us'></script>
+                    </div>
 
 
-                        <div class="swipe-menu " style="margin-top: -13px;margin-bottom: 22px;"><button class="vivify fadeIn" onclick="leftpress()" style="margin-left: 21px;border-radius: 10px 0px 0px 10px;">Live Games</button> <button onclick="rightpress()">Athletics</button><a href="#podcast"><button>Podcast</button></a><a href="#settings"><button style="margin-right: 10px;border-radius: 0px 10px 10px 0px;">Settings</button></a></div>
+                    <div class="swipe-menu " style="margin-top: -13px;margin-bottom: 22px;"><button class="vivify fadeIn" onclick="leftpress()" style="margin-left: 21px;border-radius: 10px 0px 0px 10px;">Live Games</button> <button onclick="rightpress()">Athletics</button><a href="#podcast"><button>Podcast</button></a><a href="#settings"><button style="margin-right: 10px;border-radius: 0px 10px 10px 0px;">Settings</button></a></div>
 
 
 
@@ -175,122 +169,311 @@ Google Calendar
 
 
 
-                        <a href="#">
-                            <div class="options-sect">
-                                <button onclick="meal()">
-                                    <i class="menu-icon material-icons">
-
-                                        restaurant</i>
-                                    <h3>Meal Menu</h3>
-
-                                </button>
-
-
-                            </div>
-                        </a>
-
-
-
-                        <a href="#">
-                            <div class="options-sect" onclick="kahoot()">
-                                <button>
-                                    <i class="menu-icon material-icons">
-                                        date_range
-                                    </i>
-                                    <h3> School Calendar</h3>
-
-                                </button>
-
-                            </div>
-                        </a>
-
-
-
-
+                    <a href="#">
                         <div class="options-sect">
-                            <button onclick="admiral()">
+                            <button onclick="meal()">
                                 <i class="menu-icon material-icons">
 
-                                    shopping_cart</i>
-                                <h3>Shop School Store</h3>
+                                    restaurant</i>
+                                <h3>Meal Menu</h3>
+
+                            </button>
+
+
+                        </div>
+                    </a>
+
+
+
+                    <a href="#">
+                        <div class="options-sect" onclick="kahoot()">
+                            <button>
+                                <i class="menu-icon material-icons">
+                                    date_range
+                                </i>
+                                <h3> School Calendar</h3>
 
                             </button>
 
                         </div>
+                    </a>
 
 
 
 
-                        <a href="https://261985.stiinformationnow.com/InformationNow/Login.aspx?ReturnUrl=%2fInformationNow%2fMobile%2fGradeBook.List.aspx">
-                            <div class="options-sect">
+                    <div class="options-sect">
+                        <button onclick="admiral()">
+                            <i class="menu-icon material-icons">
 
-                                <button onclick="grades()">
-                                    <i class="material-icons menu-icon">school</i>
-                                    <h3>Check My Grades</h3>
+                                shopping_cart</i>
+                            <h3>Shop School Store</h3>
 
-                                </button>
-
-                            </div>
-                        </a>
-
-
-
-
-
-                        <a href="https://payments.efundsforschools.com/v3/districts/56099" target="_self">
-                            <div class="options-sect">
-                                <button>
-                                    <i class="material-icons menu-icon">credit_card</i>
-                                    <h3>Pay Fees/Lunch</h3>
-
-                                </button>
-
-                            </div>
-                        </a>
+                        </button>
 
                     </div>
+
+
+
+
+                    <a href="https://261985.stiinformationnow.com/InformationNow/Login.aspx?ReturnUrl=%2fInformationNow%2fMobile%2fGradeBook.List.aspx">
+                        <div class="options-sect">
+
+                            <button onclick="grades()">
+                                <i class="material-icons menu-icon">school</i>
+                                <h3>Check My Grades</h3>
+
+                            </button>
+
+                        </div>
+                    </a>
+
+
+
+
+
+                    <a href="https://payments.efundsforschools.com/v3/districts/56099" target="_self">
+                        <div class="options-sect">
+                            <button>
+                                <i class="material-icons menu-icon">credit_card</i>
+                                <h3>Pay Fees/Lunch</h3>
+
+                            </button>
+
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        <div id="swipe-2" class="col s12 red" style="height: 100%;">Second tab content</div>
+
+
+        <script>
+            $('ul.tabs').tabs({
+                swipeable: true,
+                responsiveThreshold: Infinity
+            });
+
+        </script>
+
+
+
+
+
+        <div class="card-divider" style="margin-top: 10px;"></div>
+
+
+
+        <div class="navigation-card"></div>
+
+        <div class="scroll-elements">
+
+
+
+
+
+
+
+
+            <div class="navigation-card cd1  help" data-aos="fade-up">
+
+                <h3 style="margin-left: 23px;">School Store Sale | Entire Store 20% Off
+                </h3>
+                <a href="#">
+                    <div>
+                        <h4 style="margin-left: 23px">Admiral Nation
+                        </h4>
+                    </div>
+                </a>
+
+
+
+                <div class="swipe-menu" style="margin-top: 10px;"><img loading="lazy" data-src="ShopItems/Quarter Zip Thumbnail.jpg" /><img loading="lazy" data-src="ShopItems/T-Shirt1 Thumbnail.jpg"><img loading="lazy" data-src="ShopItems/Sweatshirt Thumbnail.jpg" /><img loading="lazy" src="ShopItems/Beanie Thumbnail.jpg" />
+
+                </div>
+
+                <div class="rounded-btn-wrapper" style="width: 182px;margin-bottom: 81px;"> <a href="#" class="rounded-btn" target="_blank"><button onclick="admiral()">Visit Site</button></a>
+
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <div id="podcast" class="popup-menu vivify pullUp podcast">
+                <div>
+                    <div class="content-container">
+                        <div class="navigation-card">
+                            <h3 style=" position: fixed;background-color:white;height: 49.3px;width: 100%;padding-left: 23px;padding-top: 10px;margin-top: 0px;z-index: 100;">Behind the Faces | Podcast</h3><a href="#">
+                                <div>
+                                    <h4 style="margin-left: 23px;position: fixed;margin-top: 31.1px;z-index: 101;">Student Council
+                                    </h4>
+                                </div>
+                            </a>
+
+
+
+
+                            <div class="spacer" style="height: 60px;"></div>
+
+                            <div class="card-wrapper" style="width: 100%; "><img style="border-radius: 0px;" class="card-img" data-src="images/behindthefaces.webp"></div>
+                        </div>
+
+                        <div class="navigation-card cd1 vivify fadeInLeft">
+
+                            <h3 style="margin-left: 23px;">Light at the End of the Tunnel
+                            </h3>
+                            <a href="#">
+                                <div>
+                                    <h4 style="margin-left: 23px">Episode 1 | 5:37
+                                    </h4>
+                                </div>
+                            </a>
+
+
+                            <div class="podcast-audio"><iframe src="https://drive.google.com/file/d/110gW9wLZ0tYdSAnnrOkIkOboqkNYtrQ4/preview?usp=sharing"></iframe>
+                            </div>
+
+
+
+                            <p class="vivify fadeIn">Facing a life - threatening disease can be difficult but there are lessons to be found in the darkness. </p>
+
+
+
+
+                        </div>
+
+                        <div class="card-divider"></div>
+
+                        <div class="navigation-card cd1 vivify fadeInLeft delay-100">
+
+                            <h3 style="margin-left: 23px;">Falling to Pieces
+                            </h3>
+                            <a href="#">
+                                <div>
+                                    <h4 style="margin-left: 23px">Episode 2 | 6:09
+                                    </h4>
+                                </div>
+                            </a>
+
+
+
+                            <div class="podcast-audio"><iframe src="https://drive.google.com/file/d/1To7UhKgwsm70WKxxbMsVgOVlpedBZfHb/preview?usp=sharing"></iframe></div>
+
+
+
+                            <p class="vivify fadeIn">So much of what we see in the mirror affects how we feel about ourselves. Family and friends help us get through.</p>
+
+
+
+
+                        </div>
+
+
+
+
+
+                        <div class="classic-cardivider"></div>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <div class="navigation-card cd1  help" data-aos="fade-up">
+
+                <h3 style="margin-left: 23px;">Behind the Faces | Podcast
+                </h3>
+                <a href="#">
+                    <div>
+                        <h4 style="margin-left: 23px">Student Council
+                        </h4>
+                    </div>
+                </a>
+
+
+                <div class="card-wrapper">
+                    <h3 data-aos="fade-in" data-aos-delay="300">Podcast</h3><img class="card-img" style="object-fit: cover;" data-src="images/behindthefaces.webp" />
                 </div>
 
 
 
 
 
-                <div class="card-divider" style="margin-top: 10px;"></div>
+
+                <p>Listen to the storys told by students just like you. Episode 2 now available.</p>
 
 
 
-                <div class="navigation-card"></div>
-
-                <div class="scroll-elements">
-
-
-
+                <div class="rounded-btn-wrapper" style="width: 182px;margin-bottom: 81px;"> <a href="#podcast" class="rounded-btn" target="_blank"><button>Listen Now</button></a>
 
 
 
 
 
-                    <div class="navigation-card cd1  help" data-aos="fade-up">
-
-                        <h3 style="margin-left: 23px;">School Store Sale | Entire Store 20% Off
-                        </h3>
-                        <a href="#">
-                            <div>
-                                <h4 style="margin-left: 23px">Admiral Nation
-                                </h4>
-                            </div>
-                        </a>
+                </div>
+            </div>
 
 
 
-                        <div class="swipe-menu" style="margin-top: 10px;"><img loading="lazy" data-src="ShopItems/Quarter Zip Thumbnail.jpg" /><img loading="lazy" data-src="ShopItems/T-Shirt1 Thumbnail.jpg"><img loading="lazy" data-src="ShopItems/Sweatshirt Thumbnail.jpg" /><img loading="lazy" src="ShopItems/Beanie Thumbnail.jpg" />
 
-                        </div>
 
-                        <div class="rounded-btn-wrapper" style="width: 182px;margin-bottom: 81px;"> <a href="#" class="rounded-btn" target="_blank"><button onclick="admiral()">Visit Site</button></a>
 
-                        </div>
+
+
+            <div class="navigation-card cd1  help" data-aos="fade-up">
+
+                <h3 style="margin-left: 23px;">Educators Rising Competition
+                </h3>
+                <a href="#">
+                    <div>
+                        <h4 style="margin-left: 23px">Educators Rising
+                        </h4>
                     </div>
+                </a>
+
+                <div class="marquee-wrapper">
+                    <marquee style="margin-top: 15px;">1st place: “Inside Our Schools: GHS” video- Madison Peeples and Emily
+                        Smith &emsp; 4th Place: Children’s Literature (K-3): Meshayonia Hart (Author and illustrator) &emsp;
+                        5th Place: Impromptu Speaking: Jaquanda Jackson &emsp; 5th Place: Impromptu Speaking: Jaquanda
+                        Jackson </marquee>
+                </div>
+
+                <div class="swipe-menu" style="margin-top: 10px;"><img loading="lazy" style="border: none;" data-src="images/IMG-1473-min.JPG" /><img loading="lazy" style="border: none;" data-src="images/IMG-1477-min.JPG"><img loading="lazy" style="border: none;" data-src="images/IMG-1474-min.JPG" /><img loading="lazy" style="border: none;" data-src="images/IMG-1475-min.JPG" />
+
+                </div>
+
+
+
+
+                <p style="margin-top: 6px;">
+
+
+
+
+
+                    These young ladies have the potential to travel to Dallas, Texas to compete for Nationals in June. I’m
+                    very proud of our future teachers!
+
+                    Please congratulate them! There was a lot of competition in each category. </p>
+
+
+            </div>
 
 
 
@@ -301,248 +484,22 @@ Google Calendar
 
 
 
-                    <div id="podcast" class="popup-menu vivify pullUp podcast">
-                        <div>
-                            <div class="content-container">
-                                <div class="navigation-card">
-                                    <h3 style=" position: fixed;background-color:white;height: 49.3px;width: 100%;padding-left: 23px;padding-top: 10px;margin-top: 0px;z-index: 100;">Behind the Faces | Podcast</h3><a href="#">
-                                        <div>
-                                            <h4 style="margin-left: 23px;position: fixed;margin-top: 31.1px;z-index: 101;">Student Council
-                                            </h4>
-                                        </div>
-                                    </a>
+            <div class="navigation-card cd1 vivify fadeIn delay-100 help" data-aos="fade-up">
 
-
-
-
-                                    <div class="spacer" style="height: 60px;"></div>
-
-                                    <div class="card-wrapper" style="width: 100%; "><img style="border-radius: 0px;" class="card-img" data-src="images/behindthefaces.webp"></div>
-                                </div>
-
-                                <div class="navigation-card cd1 vivify fadeInLeft">
-
-                                    <h3 style="margin-left: 23px;">Light at the End of the Tunnel
-                                    </h3>
-                                    <a href="#">
-                                        <div>
-                                            <h4 style="margin-left: 23px">Episode 1 | 5:37
-                                            </h4>
-                                        </div>
-                                    </a>
-
-
-                                    <div class="podcast-audio"><iframe src="https://drive.google.com/file/d/110gW9wLZ0tYdSAnnrOkIkOboqkNYtrQ4/preview?usp=sharing"></iframe>
-                                    </div>
-
-
-
-                                    <p class="vivify fadeIn">Facing a life - threatening disease can be difficult but there are lessons to be found in the darkness. </p>
-
-
-
-
-                                </div>
-
-                                <div class="card-divider"></div>
-
-                                <div class="navigation-card cd1 vivify fadeInLeft delay-100">
-
-                                    <h3 style="margin-left: 23px;">Falling to Pieces
-                                    </h3>
-                                    <a href="#">
-                                        <div>
-                                            <h4 style="margin-left: 23px">Episode 2 | 6:09
-                                            </h4>
-                                        </div>
-                                    </a>
-
-
-
-                                    <div class="podcast-audio"><iframe src="https://drive.google.com/file/d/1To7UhKgwsm70WKxxbMsVgOVlpedBZfHb/preview?usp=sharing"></iframe></div>
-
-
-
-                                    <p class="vivify fadeIn">So much of what we see in the mirror affects how we feel about ourselves. Family and friends help us get through.</p>
-
-
-
-
-                                </div>
-
-
-
-
-
-                                <div class="classic-cardivider"></div>
-
-
-                            </div>
-                        </div>
+                <h3 style="margin-left: 23px;">Give Feedback | Help Improve The GHS App
+                </h3>
+                <a href="#">
+                    <div>
+                        <h4 style="margin-left: 23px">GHS App
+                        </h4>
                     </div>
+                </a>
 
+                <span class="likebtn-wrapper" data-identifier="item_1"></span>
 
 
-
-
-
-
-
-
-
-                    <div class="navigation-card cd1  help" data-aos="fade-up">
-
-                        <h3 style="margin-left: 23px;">Behind the Faces | Podcast
-                        </h3>
-                        <a href="#">
-                            <div>
-                                <h4 style="margin-left: 23px">Student Council
-                                </h4>
-                            </div>
-                        </a>
-
-
-                        <div class="card-wrapper">
-                            <h3 data-aos="fade-in" data-aos-delay="300">Podcast</h3><img class="card-img" style="object-fit: cover;" data-src="images/behindthefaces.webp" />
-                        </div>
-
-
-
-
-
-
-                        <p>Listen to the storys told by students just like you. Episode 2 now available.</p>
-
-
-
-                        <div class="rounded-btn-wrapper" style="width: 182px;margin-bottom: 81px;"> <a href="#podcast" class="rounded-btn" target="_blank"><button>Listen Now</button></a>
-
-
-
-
-
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-                    <div class="navigation-card cd1  help" data-aos="fade-up">
-
-                        <h3 style="margin-left: 23px;">Educators Rising Competition
-                        </h3>
-                        <a href="#">
-                            <div>
-                                <h4 style="margin-left: 23px">Educators Rising
-                                </h4>
-                            </div>
-                        </a>
-
-                        <div class="marquee-wrapper">
-                            <marquee style="margin-top: 15px;">1st place: “Inside Our Schools: GHS” video- Madison Peeples and Emily
-                                Smith &emsp; 4th Place: Children’s Literature (K-3): Meshayonia Hart (Author and illustrator) &emsp;
-                                5th Place: Impromptu Speaking: Jaquanda Jackson &emsp; 5th Place: Impromptu Speaking: Jaquanda
-                                Jackson </marquee>
-                        </div>
-
-                        <div class="swipe-menu" style="margin-top: 10px;"><img loading="lazy" style="border: none;" data-src="images/IMG-1473-min.JPG" /><img loading="lazy" style="border: none;" data-src="images/IMG-1477-min.JPG"><img loading="lazy" style="border: none;" data-src="images/IMG-1474-min.JPG" /><img loading="lazy" style="border: none;" data-src="images/IMG-1475-min.JPG" />
-
-                        </div>
-
-
-
-
-                        <p style="margin-top: 6px;">
-
-
-
-
-
-                            These young ladies have the potential to travel to Dallas, Texas to compete for Nationals in June. I’m
-                            very proud of our future teachers!
-
-                            Please congratulate them! There was a lot of competition in each category. </p>
-
-
-                    </div>
-
-
-
-
-
-
-
-
-
-
-                    <div class="navigation-card cd1 vivify fadeIn delay-100 help" data-aos="fade-up">
-
-                        <h3 style="margin-left: 23px;">Give Feedback | Help Improve The GHS App
-                        </h3>
-                        <a href="#">
-                            <div>
-                                <h4 style="margin-left: 23px">GHS App
-                                </h4>
-                            </div>
-                        </a>
-
-                        <span class="likebtn-wrapper" data-identifier="item_1"></span>
-
-
-                        <div class="rounded-btn-wrapper" style="margin-bottom: 77px;width: 182px; "> <a href="https://goo.gl/forms/DhvAH3uesqBiV3JD3" class="rounded-btn" target="_blank"><button>Give
-                                    Feedback</button></a>
-
-                        </div>
-
-                    </div>
-
-
-
-
-
-
-
-
-
-
-                    <div class="card-divider"></div>
-
-
-
-
-
-
-
-
-                    <div class="navigation-card cd1 vivify fadeIn delay-100 help" data-aos="fade-up">
-
-                        <h3 style="margin-left: 23px;">Back To Top
-                        </h3>
-                        <a href="#">
-                            <div>
-                                <h4 style="margin-left: 23px">GHS App - Help
-                                </h4>
-                            </div>
-                        </a>
-
-                        <div class="rounded-btn-wrapper" style="margin-bottom: 73px;width: 182px;"> <a href="#" class="rounded-btn"><button>Back To Top</button></a>
-
-                        </div>
-                    </div>
-
-                    <div class="card-divider"></div>
-
-                    <div class="spacer" style="margin-bottom: 25px;"></div>
-
-
-                    <div class="privacy-policy"><a href="privacy%20policy.html" target="self">
-
-                            <p>Tap To View Privacy Policy</p>
-                        </a></div>
+                <div class="rounded-btn-wrapper" style="margin-bottom: 77px;width: 182px; "> <a href="https://goo.gl/forms/DhvAH3uesqBiV3JD3" class="rounded-btn" target="_blank"><button>Give
+                            Feedback</button></a>
 
                 </div>
 
@@ -550,26 +507,58 @@ Google Calendar
 
 
 
+
+
+
+
+
+
+
+            <div class="card-divider"></div>
+
+
+
+
+
+
+
+
+            <div class="navigation-card cd1 vivify fadeIn delay-100 help" data-aos="fade-up">
+
+                <h3 style="margin-left: 23px;">Back To Top
+                </h3>
+                <a href="#">
+                    <div>
+                        <h4 style="margin-left: 23px">GHS App - Help
+                        </h4>
+                    </div>
+                </a>
+
+                <div class="rounded-btn-wrapper" style="margin-bottom: 73px;width: 182px;"> <a href="#" class="rounded-btn"><button>Back To Top</button></a>
+
+                </div>
+            </div>
+
+            <div class="card-divider"></div>
+
+            <div class="spacer" style="margin-bottom: 25px;"></div>
+
+
+            <div class="privacy-policy"><a href="privacy%20policy.html" target="self">
+
+                    <p>Tap To View Privacy Policy</p>
+                </a></div>
+
         </div>
-        <div id="test2" class="col s12">Test 2</div>
 
     </div>
 
-    <script>
-        $(document).ready(function() {
-            $('ul.tabs').tabs();
-        });
-        $(document).ready(function() {
-            $('ul.tabs').tabs('select_tab', 'tab_id');
-        });
 
 
+    </div>
+    <div id="test2" class="col s12">Test 2</div>
 
-        $('#tabs-swipe-demo').tabs({
-            'swipeable': true
-        });
-
-    </script>
+    </div>
 
 
 
