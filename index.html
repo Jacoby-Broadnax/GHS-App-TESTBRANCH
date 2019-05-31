@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>GHS App</title>
-    <link rel="stylesheet" href="main.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0" />
     <link rel="manifest" href="/manifest.json">
     <link rel="stylesheet" href="css/vivify.min.css">
@@ -26,6 +26,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="main.css">
     <script>
         $(function() {
             $("#tabs").tabs();
@@ -137,13 +138,33 @@ Google Calendar
 
 
 
-        <div class="spacer" style="height: 40px;"></div>
+        <div class="spacer" style="height: 100px;"></div>
 
 
+        <style>
+            .carousel .carousel-item {
+  width: 100%;
+}
+            .tabs .tab a{
+            color:#767676;
+        } /*Black color to the text*/
 
-        <ul id="tabs-swipe-demo" class="tabs">
-            <li class="tab col s3"><a href="#swipe-1" class="active">Home</a></li>
-            <li class="tab col s3"><a href="#swipe-2">News</a></li>
+        .tabs .tab a:hover {
+     
+        } /*Text color on hover*/
+
+        .tabs .tab a.active {
+            
+            color:#012395;
+        } /*Background and text color when a tab is active*/
+
+        .tabs .indicator {
+            background-color:#012395;
+        } /*Color of underline*/
+</style>
+        <ul style="position: fixed;top: 40px; z-index: 50" id="tabs-swipe-demo" class="tabs">
+            <li class="tab col s2"><a href="#swipe-1" class="active">Home</a></li>
+            <li class="tab col s2"><a href="#swipe-2">News</a></li>
 
         </ul>
         <div id="swipe-1" class="col s12 blue" style="width: 100%;height: 100%;">
@@ -556,7 +577,7 @@ Google Calendar
 
 
     </div>
-    <div id="test2" class="col s12">Test 2</div>
+
 
     </div>
 
