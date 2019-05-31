@@ -18,6 +18,13 @@ a {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+::-webkit-scrollbar {
+    width: 0px;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
+}
+
 body {
     font-family: sans-serif;
     margin: 0px;
@@ -299,7 +306,11 @@ summary:focus {
     white-space: nowrap;
     position: relative;
     z-index: 300;
+    scroll-snap-type: x mandatory;
 
+    scroll-padding {
+        20px;
+    }
 }
 
 .swipe-menu > img {
@@ -313,6 +324,7 @@ summary:focus {
     border-width: 1.3px;
     border-color: lightgray;
     transition: 0.3s ease;
+    scroll-snap-align: center;
 }
 
 .swipe-menu > a > img {
@@ -328,17 +340,28 @@ summary:focus {
     transition: 0.3s ease;
 }
 
-#view {position: fixed;top: 0px;left: 0px; transition: 0.5s ease;width: 0px;z-index: 500;object-fit: cover;height: 0px;}
+#view {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    transition: 0.5s ease;
+    width: 0px;
+    z-index: 500;
+    object-fit: cover;
+    height: 0px;
+}
 
 #view:target {
 
     width: 100%;
     border-radius: 0px;
-   height: 100%;
-   
+    height: 100%;
+
 
 
 }
+
+
 
 #view2:target {
     position: fixed;
@@ -423,9 +446,35 @@ summary:focus {
     transition: 0.3s ease;
 }
 
+.swipe-menu > button {
+    margin-left: -6px;
 
+    display: inline-block;
+    height: 50px;
+    object-fit: cover;
+    width: 125px;
+    border: solid;
+    border-width: 1px;
+    border-color: lightgray;
+    transition: 0.3s ease;
+    background-color: white;
+    scroll-snap-align: start;
+}
 
+.swipe-menu > a > button {
+    margin-left: -6px;
 
+    display: inline-block;
+    height: 50px;
+    object-fit: cover;
+    width: 125px;
+    border: solid;
+    border-width: 1px;
+    border-color: lightgray;
+    transition: 0.3s ease;
+    background-color: white;
+    scroll-snap-align: start;
+}
 
 .swipe-menu > p {
     margin-left: 10px;
@@ -529,10 +578,33 @@ summary:focus {
 
 }
 
+.back {
+    position: fixed;
+    top: 9px;
+    z-index: 100;
+
+    width: 66px;
+    height: 40px;
+    border-radius: 33px;
+    left: 1px;
+}
+
+.back > i {
+    margin-left: 23px;
+    margin-top: 6px;
+    color: #012395;
+
+}
+
+
 .options-sect {
     margin-left: 20px;
     margin-top: 11px;
 
+}
+
+.options-sect > button > i {
+    color: #012395;
 }
 
 .menu-cover {
@@ -696,6 +768,8 @@ summary:focus {
 .audio-wrapper {
     margin: auto;
     width: 90%;
+    position: relative;
+    z-index: 100;
     ;
 }
 
@@ -830,8 +904,7 @@ summary > div > p {
 }
 
 .logo-wrapper {
-    margin: auto;
-    width: 71px;
+    margin-left: 53px;
     margin-top: 56px;
 
 }
@@ -849,6 +922,9 @@ summary > div > p {
     transition: 0.5s ease;
     position: relative;
     z-index: -1;
+    background-color: white;
+    padding-bottom: 5px;
+    padding-top: 1px;
 }
 
 .navigation-card > a > div > h4 {
@@ -936,6 +1012,7 @@ card-btns > button > a {
     border-radius: 50px;
     height: 40px;
     object-fit: cover;
+    margin-top: 10px;
 
 }
 
@@ -961,7 +1038,7 @@ card-btns > button > a {
     height: 100%;
     ;
 
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+
     border-radius: 10px;
 }
 
@@ -980,6 +1057,74 @@ card-btns > button > a {
     right: 28px;
 }
 
+.arrowBounce {
+    animation: bounce 2s infinite;
+    color: #012395;
+    ;
+    font-size: 27px;
+    position: relative;
+    margin-top: 6px;
+    top: 6px;
+}
+
+.arrowBounce::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    background: url("../assets/images/scroll-arrow.svg") no-repeat;
+    height: 26px;
+    width: 18px;
+}
+
+.scroll-space {
+    border: solid;
+    border-width: 1.3px;
+    border-color: lightgray;
+    border-radius: 10px 10px 0px 0px;
+    margin: auto;
+    width: 336px;
+}
+
+.scroll-space > h3 {
+    margin-left: 84px;
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 2px;
+    padding-bottom: -1px;
+}
+
+
+
+.scroll-indicator {
+    position: fixed;
+    width: 100%;
+
+    bottom: 0px;
+    z-index: 10;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+
 .popup-menu {
     position: fixed;
     width: 100%;
@@ -995,6 +1140,12 @@ card-btns > button > a {
 
 #podcast:target {
     display: block;
+}
+
+.podcast-audio > iframe {
+    border: none;
+    width: 100%;
+    height: 50px;
 }
 
 .content-container {
@@ -1028,7 +1179,7 @@ card-btns > button > a {
 
 .card-wrapper > h3 {
     position: absolute;
-    top: 24px;
+    top: 37px;
     color: white;
     font-weight: normal;
     font-size: 28px;
@@ -1054,12 +1205,13 @@ card-btns > button > a {
 
 .card-divider {
     width: 100%;
-    height: 1px;
+    border-top: solid 1.3px lightgray;
+    ;
+
 
     ;
-    filter: opacity(0.4);
-    margin-top: 20px;
-    margin-bottom: 15px;
+
+
     background-color: lightgray;
 }
 
@@ -1163,15 +1315,16 @@ card-btns > button > a {
 
 .search-link {
     position: fixed;
-    left: 0px;
-    width: 100%;
-    top: 9px;
+    right: -241px;
+    width: 296px;
+    ;
+    top: 4px;
     z-index: 55;
+
 }
 
 .search-base {
-    margin: auto;
-    width: 93%;
+
     height: 47px;
     background-color: white;
     border-radius: 31px;
@@ -1179,7 +1332,7 @@ card-btns > button > a {
 
 .search-base > button > i {
     float: left;
-    margin-left: 90px;
+
     margin-top: 11px;
 }
 
@@ -1414,6 +1567,59 @@ card-btns > button > a {
     border: none;
 }
 
+#tabs {
+    background-color: white;
+    width: 100%;
+    padding-top: 10px;
+    position: relative;
+    top: 0px;
+    height: 100%
+}
+
+#tabs > ul > li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+#tabs > ul > li > a {
+    font-size: 14px;
+}
+
+#tabs > ul {
+    position: fixed;
+    width: 100%;
+    height: 30px;
+    ;
+    background-color: white;
+    padding-top: 15px;
+}
+
+.borderLeftRight {
+    display: inline-block;
+    position: relative;
+    color: #474E51;
+}
+
+.borderLeftRight::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #012395;
+    transform-origin: bottom right;
+    margin-bottom: -10px;
+    transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.borderLeftRight:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
 .site {
     display: none;
     position: absolute;
@@ -1429,7 +1635,7 @@ card-btns > button > a {
 
 
 .calendar > iframe {
-    height: 74%;
+    height: 100%;
 }
 
 .rounded-btn-wrapper {
@@ -1479,7 +1685,7 @@ card-btns > button > a {
 
 
 
-.grades-sect > embed {
+.grades-sect > iframe {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -1509,8 +1715,8 @@ card-btns > button > a {
 
 .hero-image > img {
     width: 100%;
-    position: relative;
-    top: -209px;
+    position: absolute;
+    top: 26px;
     z-index: 38;
     filter: brightness(0.92);
     height: 222px;
@@ -1587,6 +1793,14 @@ card-btns > button > a {
 
 }
 
+#kahootactive {
+    display: none;
+}
+
+#kahootactive :target {
+    display: block;
+}
+
 .kahoot-sect > iframe {
 
     position: fixed;
@@ -1600,7 +1814,15 @@ card-btns > button > a {
 }
 
 
+.kahoot-frame > iframe {
+    position: fixed;
 
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    border: none;
+    z-index: 15;
+}
 
 
 
@@ -1621,7 +1843,7 @@ card-btns > button > a {
     -webkit-overflow-scrolling: touch;
     overflow-y: scroll;
     border: none;
-    top: 0px;
+    top: 44px;
 
 
 }
@@ -1829,7 +2051,15 @@ card-btns > button > a {
 /*-----------------------------------Dark Mode------------------------------------*/
 
 
+body.darkclass .swipe-menu > button {
+    background-color: black;
+    color: white;
+}
 
+body.darkclass .swipe-menu > a > button {
+    background-color: black;
+    color: white;
+}
 
 body.darkclass .meal-wrapper {
     margin-top: -465px;
@@ -1846,6 +2076,7 @@ body.darkclass .header-base {
 
 body.darkclass .navigation-card {
     color: white;
+    background-color: black;
 }
 
 body.darkclass .menu-button > button {
@@ -1906,9 +2137,7 @@ body.darkclass .navigation-card > p {
 
 body.darkclass .search-base {
     background-color: black;
-    border: solid;
-    border-color: white;
-    border-width: 1.3px;
+
 }
 
 body.darkclass .search-base > button > p {
@@ -2157,4 +2386,43 @@ body.darkclass button {
         bottom: 60px;
         opacity: 0;
     }
+}
+
+.scroll-elements {
+    position: relative;
+    z-index: 15;
+    scroll-snap-align: start;
+    scroll-snap-align: center;
+}
+
+.homescreen {
+    scroll-snap-type: y mandatory;
+}
+
+#settings {
+    display: none;
+}
+
+#settings:target {
+    display: block;
+}
+
+.settings-sect {
+    position: fixed;
+    top: 0px;
+    background-color: white;
+    height: 100%;
+    overflow-y: scroll;
+    white-space: nowrap;
+}
+
+.goog-te-banner {
+    display: none;
+}
+
+.weather-widget {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 150px;
 }
