@@ -151,7 +151,7 @@ Google Calendar
 
                 </ul>
             </div>
-            <div id="test1" class="col s12" style="width: 100%; background-color: green;">
+            <div id="test1" class="col s12" style="width: 100%; ;">
 
                 <div class="navigation-card">
                     <div class="options">
@@ -562,10 +562,11 @@ Google Calendar
         $(document).ready(function() {
             $('ul.tabs').tabs('select_tab', 'tab_id');
         });
-        $(document).ready(function() {
-            $('.tabs').tabs({
-                swipeable: true
-            });
+
+
+
+        $('#tabs-swipe-demo').tabs({
+            'swipeable': true
         });
 
     </script>
